@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ryszard Klimczewski - Technical 3D Artist</title>
+        <link rel="icon" href="images/ryskDigitalFavicon.png" />
+        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/rubikFont.css" />
+        <link rel="preload" href="images/Homepage_Screen_01.jpg" as="image" />
+        <link rel="preload" href="images/Homepage_Screen_02.jpg" as="image" />
+        <link rel="preload" href="images/Homepage_Screen_03.jpg" as="image" />
+        <link rel="preload" href="images/Homepage_Screen_04.jpg" as="image" />
+        <link rel="preload" href="images/Homepage_Screen_05.jpg" as="image" />
+        <script type="text/javascript" src="main.js"></script>
+    </head>
+
+    <body>
+        <div class="mainPageSlides"></div>
+        <script>
+            setInterval(changeBackgroundImage, 5000);
+        </script>
+        <div class="sidebar">
+            <div class="sidebarHeader">
+                <a href="index.html">
+                    <div id="mainLogoOverlay"></div>
+                    <img src="images/ryskDigitalLogoDark.png" id="mainLogo" />
+                </a>
+                <div class="artistInformation">
+                    <h1 class="artistName">Ryszard Klimczewski</h1>
+                    <p class="artistTitle">Technical 3D Artist</p>
+                </div>
+            </div>
+            <div class="sidebarBody">
+                <nav>
+                    <ul class="sidebarNavList">
+                        <li class="sidebarNavListItem">
+                            <a class="sidebarNavLink" href="index.html">
+                                Home
+                            </a>
+                        </li>
+                        <li class="sidebarNavListItem">
+                            <a class="sidebarNavLink" href="Portfolio.html">
+                                Portfolio
+                            </a>
+                        </li>
+                        <li class="sidebarNavListItem">
+                            <a class="sidebarNavLink" href="Resume.html">
+                                Resume
+                            </a>
+                        </li>
+                    </ul>
+                    <script>
+                        styleCurrentNavLink();
+                    </script>
+                </nav>
+            </div>
+            <div class="sidebarFooter">
+                <p class="footerText">&copy; Ryszard Klimczewski, 2021</p>
+            </div>
+        </div>
+    </body>
+</html>

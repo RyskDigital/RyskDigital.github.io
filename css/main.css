@@ -1,0 +1,111 @@
+body {
+    margin: 0px;
+}
+#mainLogo {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+#mainLogoOverlay {
+    transition: 0.5s;
+    position: absolute;
+    background-color: #ff861b;
+    width: 70px;
+    height: 70px;
+    opacity: 0;
+    border-radius: 35px;
+}
+#mainLogoOverlay:hover {
+    opacity: 0.7;
+}
+.artistInformation {
+    padding-left: 10px;
+}
+.artistName {
+    max-width: max-content;
+    font-family: "Rubik";
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    color: #ff861b;
+    margin: 0px;
+    position: relative;
+    top: 12px;
+}
+.artistTitle {
+    max-width: max-content;
+    font-family: "Rubik";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    color: #d9d9d9;
+    margin: 0px;
+    position: relative;
+    top: 12px;
+    left: 20px;
+}
+.sidebar {
+    z-index: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    position: absolute;
+    left: 50px;
+    background-color: rgb(10, 10, 10, 0.8);
+    height: 100%;
+}
+.sidebarHeader {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 50px 25px 0px 25px;
+}
+.sidebarBody {
+    flex-grow: 1;
+}
+.sidebarFooter {
+    align-self: flex-start;
+    padding: 10px;
+}
+.footerText {
+    margin: 0px;
+    margin-left: 15px;
+    color: #979797;
+    font-family: "Rubik";
+    font-style: italic;
+    font-weight: 300;
+    font-size: 14px;
+}
+.mainPageSlides {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.mainPageSlides {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/Homepage_Screen_01.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition: background-image 1s;
+}
+.sidebarNavLink {
+    transition: 0.5s;
+    font-family: "Rubik";
+    color: #979797;
+    font-weight: 300;
+    font-size: 22px;
+    font-style: normal;
+    text-decoration: none;
+}
+.sidebarNavLink.current {
+    color: #ff861b;
+}
+.sidebarNavLink:hover {
+    color: #ff861b;
+}
+.sidebarNavListItem {
+    padding: 10px;
+}
+.sidebarNavList {
+    padding-left: 25px;
+}
