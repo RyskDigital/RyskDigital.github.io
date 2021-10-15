@@ -28,6 +28,10 @@ function changeBackgroundImage() {
 }
 
 function styleCurrentNavLink() {
+    if (location.pathname == "/") {
+        let homePageLink = document.getElementById("homeLink");
+        homePageLink.classList.add("currentPage");
+    }
     let navLinks = document.getElementsByClassName("sideBarNavLink");
     for (let item of navLinks) {
         if (location.pathname.includes("/" + item.getAttribute("href"))) {
