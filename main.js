@@ -3,7 +3,6 @@ function changeBackgroundImage() {
     let computedStyle = getComputedStyle(slideElement);
     let currentBackgroundImage =
         computedStyle.getPropertyValue("background-image");
-    console.log(currentBackgroundImage);
     switch (true) {
         case currentBackgroundImage.includes("images/Homepage_Screen_01.jpg"):
             slideElement.classList.remove("slide1");
@@ -31,7 +30,7 @@ function changeBackgroundImage() {
 function styleCurrentNavLink() {
     let navLinks = document.getElementsByClassName("sideBarNavLink");
     for (let item of navLinks) {
-        if ("/" + item.getAttribute("href") == location.pathname) {
+        if (location.pathname.includes("/" + item.getAttribute("href"))) {
             item.classList.add("currentPage");
         }
     }
