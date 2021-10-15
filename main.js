@@ -1,8 +1,9 @@
 function changeBackgroundImage() {
-    let slideElement = document.getElementById("homePageSlideBlock");
+    let slideElement = document.getElementsByClassName("homePageSlideBlock")[0];
     let computedStyle = getComputedStyle(slideElement);
     let currentBackgroundImage =
         computedStyle.getPropertyValue("background-image");
+    console.log(currentBackgroundImage);
     switch (true) {
         case currentBackgroundImage.includes("images/Homepage_Screen_01.jpg"):
             slideElement.classList.remove("slide1");

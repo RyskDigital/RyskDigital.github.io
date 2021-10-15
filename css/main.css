@@ -119,7 +119,7 @@ ul {
   font-size: 0.9em;
 }
 
-#homePageSlideBlock {
+.homePageSlideBlock {
   position: absolute;
   top: 0;
   left: 0;
@@ -131,6 +131,7 @@ ul {
   -webkit-transition: background-image 1s;
   transition: background-image 1s;
   z-index: 1;
+  background-image: url(../images/Homepage_Screen_01.jpg);
 }
 
 .slide1 {
