@@ -1,0 +1,134 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+:root {
+    --backgroundColor: #262626;
+    --navBarBackgroundColor: rgb(10, 10, 10, 0.8);
+    --titleTextColor: #ff861b;
+    --subTitleTextColor: #d9d9d9;
+    --menuTextColor: #979797;
+}
+
+html,
+body {
+    margin: 0;
+    font-family: "Rubik";
+    height: 100%;
+    width: 100%;
+    background-color: var(--backgroundColor);
+}
+
+body {
+    position: relative;
+    z-index: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navBar {
+    position: fixed;
+    left: 2em;
+    z-index: 2;
+    background-color: var(--navBarBackgroundColor);
+    display: flex;
+    flex-direction: column;
+    height: inherit;
+    height: 100%;
+    max-width: fit-content;
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        margin: 4em 1.5em 1.5em 1.5em;
+    }
+
+    .body {
+        flex-grow: 1;
+    }
+
+    .mainLogo {
+        width: 70px;
+        height: 70px;
+        border-radius: 35px;
+        margin-right: 0.5em;
+    }
+
+    .artistName {
+        font-style: italic;
+        font-size: 1.25em;
+        font-weight: 400;
+        margin: 0;
+        margin-top: 0.65em;
+        color: var(--titleTextColor);
+    }
+
+    .artistTitle {
+        font-size: 1em;
+        font-weight: 400;
+        margin: 0;
+        margin-left: 1.2em;
+        color: var(--subTitleTextColor);
+    }
+
+    .sideBarNavLink {
+        font-weight: 300;
+        font-size: 1.4em;
+        text-decoration: none;
+        color: var(--menuTextColor);
+        transition: 0.5s;
+
+        &:hover {
+            color: var(--titleTextColor);
+        }
+    }
+
+    .currentPage {
+        color: var(--titleTextColor);
+    }
+
+    li {
+        margin: 1.2em;
+        margin-left: 1.5em;
+    }
+
+    .footer {
+        color: var(--menuTextColor);
+
+        p {
+            font-style: italic;
+            margin-left: 1.6em;
+            font-size: 0.9em;
+        }
+    }
+}
+
+#homePageSlideBlock {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition: background-image 1s;
+    z-index: 1;
+}
+.slide1 {
+    background-image: url(../images/Homepage_Screen_01.jpg);
+}
+.slide2 {
+    background-image: url(../images/Homepage_Screen_02.jpg);
+}
+.slide3 {
+    background-image: url(../images/Homepage_Screen_03.jpg);
+}
+.slide4 {
+    background-image: url(../images/Homepage_Screen_04.jpg);
+}
+.slide5 {
+    background-image: url(../images/Homepage_Screen_05.jpg);
+}

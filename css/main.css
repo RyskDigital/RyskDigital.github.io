@@ -1,111 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+:root {
+  --backgroundColor: #262626;
+  --navBarBackgroundColor: rgb(10, 10, 10, 0.8);
+  --titleTextColor: #ff861b;
+  --subTitleTextColor: #d9d9d9;
+  --menuTextColor: #979797;
+}
+
+html,
 body {
-    margin: 0px;
+  margin: 0;
+  font-family: "Rubik";
+  height: 100%;
+  width: 100%;
+  background-color: var(--backgroundColor);
 }
-#mainLogo {
-    width: 70px;
-    height: 70px;
-    border-radius: 35px;
+
+body {
+  position: relative;
+  z-index: 0;
 }
-#mainLogoOverlay {
-    transition: 0.5s;
-    position: absolute;
-    background-color: #ff861b;
-    width: 70px;
-    height: 70px;
-    opacity: 0;
-    border-radius: 35px;
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
-#mainLogoOverlay:hover {
-    opacity: 0.7;
+
+.navBar {
+  position: fixed;
+  left: 2em;
+  z-index: 2;
+  background-color: var(--navBarBackgroundColor);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: inherit;
+  height: 100%;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
-.artistInformation {
-    padding-left: 10px;
+
+.navBar .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 4em 1.5em 1.5em 1.5em;
 }
-.artistName {
-    max-width: max-content;
-    font-family: "Rubik";
-    font-style: italic;
-    font-weight: 400;
-    font-size: 20px;
-    color: #ff861b;
-    margin: 0px;
-    position: relative;
-    top: 12px;
+
+.navBar .body {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
-.artistTitle {
-    max-width: max-content;
-    font-family: "Rubik";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    color: #d9d9d9;
-    margin: 0px;
-    position: relative;
-    top: 12px;
-    left: 20px;
+
+.navBar .mainLogo {
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  margin-right: 0.5em;
 }
-.sidebar {
-    z-index: 2;
-    display: flex;
-    flex-flow: column nowrap;
-    position: absolute;
-    left: 50px;
-    background-color: rgb(10, 10, 10, 0.8);
-    height: 100%;
+
+.navBar .artistName {
+  font-style: italic;
+  font-size: 1.25em;
+  font-weight: 400;
+  margin: 0;
+  margin-top: 0.65em;
+  color: var(--titleTextColor);
 }
-.sidebarHeader {
-    display: flex;
-    flex-flow: row wrap;
-    padding: 50px 25px 0px 25px;
+
+.navBar .artistTitle {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0;
+  margin-left: 1.2em;
+  color: var(--subTitleTextColor);
 }
-.sidebarBody {
-    flex-grow: 1;
+
+.navBar .sideBarNavLink {
+  font-weight: 300;
+  font-size: 1.4em;
+  text-decoration: none;
+  color: var(--menuTextColor);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
-.sidebarFooter {
-    align-self: flex-start;
-    padding: 10px;
+
+.navBar .sideBarNavLink:hover {
+  color: var(--titleTextColor);
 }
-.footerText {
-    margin: 0px;
-    margin-left: 15px;
-    color: #979797;
-    font-family: "Rubik";
-    font-style: italic;
-    font-weight: 300;
-    font-size: 14px;
+
+.navBar .currentPage {
+  color: var(--titleTextColor);
 }
-.mainPageSlides {
-    position: absolute;
-    width: 100%;
-    height: 100%;
+
+.navBar li {
+  margin: 1.2em;
+  margin-left: 1.5em;
 }
-.mainPageSlides {
-    width: 100%;
-    height: 100%;
-    background-image: url(../images/Homepage_Screen_01.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    transition: background-image 1s;
+
+.navBar .footer {
+  color: var(--menuTextColor);
 }
-.sidebarNavLink {
-    transition: 0.5s;
-    font-family: "Rubik";
-    color: #979797;
-    font-weight: 300;
-    font-size: 22px;
-    font-style: normal;
-    text-decoration: none;
+
+.navBar .footer p {
+  font-style: italic;
+  margin-left: 1.6em;
+  font-size: 0.9em;
 }
-.sidebarNavLink.current {
-    color: #ff861b;
+
+#homePageSlideBlock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transition: background-image 1s;
+  transition: background-image 1s;
+  z-index: 1;
 }
-.sidebarNavLink:hover {
-    color: #ff861b;
+
+.slide1 {
+  background-image: url(../images/Homepage_Screen_01.jpg);
 }
-.sidebarNavListItem {
-    padding: 10px;
+
+.slide2 {
+  background-image: url(../images/Homepage_Screen_02.jpg);
 }
-.sidebarNavList {
-    padding-left: 25px;
+
+.slide3 {
+  background-image: url(../images/Homepage_Screen_03.jpg);
 }
+
+.slide4 {
+  background-image: url(../images/Homepage_Screen_04.jpg);
+}
+
+.slide5 {
+  background-image: url(../images/Homepage_Screen_05.jpg);
+}
+/*# sourceMappingURL=main.css.map */
