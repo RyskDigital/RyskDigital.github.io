@@ -29,15 +29,13 @@
                     <h2 class="artistTitle">Technical 3D Artist</h2>
                 </div>
             </div>
-            <div class="body">
+            <div id="navigationMenu" class="body">
+                <div class="closeButton" onclick="hideNavigationMenu()">
+                    <p>X</p>
+                </div>
                 <ul>
                     <li>
-                        <a
-                            id="homeLink"
-                            class="sideBarNavLink"
-                            href="index.html"
-                            >Home</a
-                        >
+                        <a class="sideBarNavLink" href="index.html">Home</a>
                     </li>
                     <li>
                         <a class="sideBarNavLink" href="Portfolio.html"
@@ -48,6 +46,9 @@
                         <a class="sideBarNavLink" href="Resume.html">Resume</a>
                     </li>
                 </ul>
+            </div>
+            <div class="menuButton" onclick="displayNavigationMenu()">
+                <p>Menu</p>
             </div>
             <div class="footer">
                 <p>&copy; Ryszard Klimczewski, 2021</p>
