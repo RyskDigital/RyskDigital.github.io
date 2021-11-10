@@ -1,0 +1,103 @@
+.portfolioGallery {
+  position: relative;
+  left: 25em;
+  top: 4em;
+  width: calc(100% - 28em);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.portfolioGallery .thumbnail {
+  position: relative;
+  -ms-flex-preferred-size: calc(100% / 4);
+      flex-basis: calc(100% / 4);
+  max-width: calc(100% / 4);
+  padding: 1rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.portfolioGallery .thumbnail .portfolioLink {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.portfolioGallery .thumbnail .portfolioLink .overlay {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  background-color: var(--backgroundColorLight);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.portfolioGallery .thumbnail .portfolioLink .overlay p {
+  margin: 0;
+  text-align: center;
+  color: var(--textColorLight);
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  font-size: 1.35em;
+}
+
+.portfolioGallery .thumbnail .portfolioLink img {
+  display: block;
+  width: calc(100% - 2px);
+  border: 1px solid var(--backgroundColor);
+  border-radius: inherit;
+}
+
+.portfolioGallery .thumbnail .portfolioLink:hover .overlay {
+  height: calc(50% - 2rem);
+}
+
+.portfolioGallery .thumbnail .portfolioLink:hover .overlay p {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+@media screen and (max-width: 1750px) {
+  .thumbnail {
+    min-width: calc(100% / 3);
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .thumbnail {
+    min-width: calc(100% / 2);
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .thumbnail {
+    min-width: 100%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .portfolioGallery {
+    left: 2em;
+    top: 6.5em;
+    width: calc(100% - 4em);
+  }
+}
+/*# sourceMappingURL=portfolio.css.map */
