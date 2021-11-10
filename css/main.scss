@@ -2,10 +2,13 @@
 
 :root {
     --backgroundColor: #262626;
+    --backgroundColorLight: #979797;
+    --backgroundColorDark: #1e1e1e;
     --navBarBackgroundColor: rgb(10, 10, 10, 0.8);
-    --titleTextColor: #ff861b;
-    --subTitleTextColor: #d9d9d9;
-    --menuTextColor: #979797;
+    --primaryAccentColor: #ff861b;
+    --textColor: #979797;
+    --textColorLight: #d9d9d9;
+    --textColorDark: #1a1a1a;
 }
 
 html,
@@ -47,6 +50,47 @@ ul {
 
     .body {
         flex-grow: 1;
+
+        .closeButton {
+            display: none;
+            position: fixed;
+            top: 0.75em;
+            right: 0.75em;
+            font-weight: bold;
+            font-size: 1.2em;
+            p {
+                color: var(--textColor);
+                margin: 0;
+                cursor: pointer;
+                transition: 0.5s;
+
+                &:hover {
+                    color: var(--primaryAccentColor);
+                }
+            }
+        }
+    }
+
+    .menuButton {
+        display: none;
+        color: var(--textColor);
+        align-self: center;
+        flex-direction: row;
+        justify-content: flex-end;
+        flex-grow: 1;
+
+        p {
+            cursor: pointer;
+            margin-right: 2em;
+            font-weight: 300;
+            font-size: 1.4em;
+            transition: 0.5s;
+            max-width: fit-content;
+
+            &:hover {
+                color: var(--primaryAccentColor);
+            }
+        }
     }
 
     .mainLogo {
@@ -62,7 +106,7 @@ ul {
         font-weight: 400;
         margin: 0;
         margin-top: 0.65em;
-        color: var(--titleTextColor);
+        color: var(--primaryAccentColor);
     }
 
     .artistTitle {
@@ -70,23 +114,23 @@ ul {
         font-weight: 400;
         margin: 0;
         margin-left: 1.2em;
-        color: var(--subTitleTextColor);
+        color: var(--textColorLight);
     }
 
     .sideBarNavLink {
         font-weight: 300;
         font-size: 1.4em;
         text-decoration: none;
-        color: var(--menuTextColor);
+        color: var(--textColor);
         transition: 0.5s;
 
         &:hover {
-            color: var(--titleTextColor);
+            color: var(--primaryAccentColor);
         }
     }
 
     .currentPage {
-        color: var(--titleTextColor);
+        color: var(--primaryAccentColor);
     }
 
     li {
@@ -95,7 +139,7 @@ ul {
     }
 
     .footer {
-        color: var(--menuTextColor);
+        color: var(--textColor);
 
         p {
             font-style: italic;
@@ -132,4 +176,54 @@ ul {
 }
 .slide5 {
     background-image: url(../images/Homepage_Screen_05.jpg);
+}
+
+@media screen and (max-width: 750px) {
+    .navBar {
+        flex-direction: row;
+        height: 6em;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+
+        .header {
+            margin: 0;
+            margin-left: 1em;
+            align-items: center;
+        }
+        .artistName {
+            margin-top: 0;
+        }
+
+        .menuButton {
+            display: flex;
+        }
+
+        .body {
+            position: fixed;
+            width: 9em;
+            height: 100%;
+            right: 0;
+            background-color: var(--backgroundColorDark);
+            padding: 4em 1em 0 0;
+            display: block;
+            display: none;
+
+            ul {
+                text-align: right;
+            }
+
+            .closeButton {
+                display: block;
+            }
+        }
+
+        .menuOpen {
+            display: block;
+        }
+
+        .footer {
+            display: none;
+        }
+    }
 }

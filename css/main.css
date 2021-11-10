@@ -1,10 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 :root {
   --backgroundColor: #262626;
+  --backgroundColorLight: #979797;
+  --backgroundColorDark: #1e1e1e;
   --navBarBackgroundColor: rgb(10, 10, 10, 0.8);
-  --titleTextColor: #ff861b;
-  --subTitleTextColor: #d9d9d9;
-  --menuTextColor: #979797;
+  --primaryAccentColor: #ff861b;
+  --textColor: #979797;
+  --textColorLight: #d9d9d9;
+  --textColorDark: #1a1a1a;
 }
 
 html,
@@ -63,6 +66,61 @@ ul {
           flex-grow: 1;
 }
 
+.navBar .body .closeButton {
+  display: none;
+  position: fixed;
+  top: 0.75em;
+  right: 0.75em;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.navBar .body .closeButton p {
+  color: var(--textColor);
+  margin: 0;
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navBar .body .closeButton p:hover {
+  color: var(--primaryAccentColor);
+}
+
+.navBar .menuButton {
+  display: none;
+  color: var(--textColor);
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.navBar .menuButton p {
+  cursor: pointer;
+  margin-right: 2em;
+  font-weight: 300;
+  font-size: 1.4em;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+}
+
+.navBar .menuButton p:hover {
+  color: var(--primaryAccentColor);
+}
+
 .navBar .mainLogo {
   width: 70px;
   height: 70px;
@@ -76,7 +134,7 @@ ul {
   font-weight: 400;
   margin: 0;
   margin-top: 0.65em;
-  color: var(--titleTextColor);
+  color: var(--primaryAccentColor);
 }
 
 .navBar .artistTitle {
@@ -84,24 +142,24 @@ ul {
   font-weight: 400;
   margin: 0;
   margin-left: 1.2em;
-  color: var(--subTitleTextColor);
+  color: var(--textColorLight);
 }
 
 .navBar .sideBarNavLink {
   font-weight: 300;
   font-size: 1.4em;
   text-decoration: none;
-  color: var(--menuTextColor);
+  color: var(--textColor);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .navBar .sideBarNavLink:hover {
-  color: var(--titleTextColor);
+  color: var(--primaryAccentColor);
 }
 
 .navBar .currentPage {
-  color: var(--titleTextColor);
+  color: var(--primaryAccentColor);
 }
 
 .navBar li {
@@ -110,7 +168,7 @@ ul {
 }
 
 .navBar .footer {
-  color: var(--menuTextColor);
+  color: var(--textColor);
 }
 
 .navBar .footer p {
@@ -152,5 +210,55 @@ ul {
 
 .slide5 {
   background-image: url(../images/Homepage_Screen_05.jpg);
+}
+
+@media screen and (max-width: 750px) {
+  .navBar {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 6em;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .navBar .header {
+    margin: 0;
+    margin-left: 1em;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navBar .artistName {
+    margin-top: 0;
+  }
+  .navBar .menuButton {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navBar .body {
+    position: fixed;
+    width: 9em;
+    height: 100%;
+    right: 0;
+    background-color: var(--backgroundColorDark);
+    padding: 4em 1em 0 0;
+    display: block;
+    display: none;
+  }
+  .navBar .body ul {
+    text-align: right;
+  }
+  .navBar .body .closeButton {
+    display: block;
+  }
+  .navBar .menuOpen {
+    display: block;
+  }
+  .navBar .footer {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */
