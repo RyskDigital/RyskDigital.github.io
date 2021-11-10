@@ -39,3 +39,13 @@ function styleCurrentNavLink() {
         }
     }
 }
+
+function displayNavigationMenu() {
+    let navigationMenu = document.getElementById("navigationMenu");
+    navigationMenu.classList.add("menuOpen");
+}
+
+function hideNavigationMenu() {
+    let navigationMenu = document.getElementById("navigationMenu");
+    navigationMenu.classList.remove("menuOpen");
+}
