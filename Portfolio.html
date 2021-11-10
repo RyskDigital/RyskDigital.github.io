@@ -7,6 +7,7 @@
         <title>Ryszard Klimczewski - Technical 3D Artist - Portfolio</title>
         <link rel="icon" href="images/ryskDigitalFavicon.png" />
         <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/portfolio.css" />
         <script type="text/javascript" src="main.js"></script>
     </head>
 
@@ -23,7 +24,10 @@
                     <h2 class="artistTitle">Technical 3D Artist</h2>
                 </div>
             </div>
-            <div class="body">
+            <div id="navigationMenu" class="body">
+                <div class="closeButton" onclick="hideNavigationMenu()">
+                    <p>X</p>
+                </div>
                 <ul>
                     <li>
                         <a class="sideBarNavLink" href="index.html">Home</a>
@@ -38,8 +42,79 @@
                     </li>
                 </ul>
             </div>
+            <div class="menuButton" onclick="displayNavigationMenu()">
+                <p>Menu</p>
+            </div>
             <div class="footer">
                 <p>&copy; Ryszard Klimczewski, 2021</p>
+            </div>
+        </div>
+        <div class="portfolioGallery">
+            <div class="thumbnail">
+                <a class="portfolioLink" href="#">
+                    <div class="overlay">
+                        <p>Amazon Upholstery</p>
+                    </div>
+                    <img
+                        src="images/projectThumbs/amazonUpholsteryThumb.png"
+                        alt="Black Chair"
+                    />
+                </a>
+            </div>
+            <div class="thumbnail">
+                <a class="portfolioLink" href="#">
+                    <div class="overlay">
+                        <p>Concrete Tiles</p>
+                    </div>
+                    <img
+                        src="images/projectThumbs/concreteTiles.png"
+                        alt="Concrete Tiles"
+                    />
+                </a>
+            </div>
+            <div class="thumbnail">
+                <a class="portfolioLink" href="#">
+                    <div class="overlay">
+                        <p>Amazon Upholstery</p>
+                    </div>
+                    <img
+                        src="images/projectThumbs/amazonUpholsteryThumb.png"
+                        alt="Black Chair"
+                    />
+                </a>
+            </div>
+            <div class="thumbnail">
+                <a class="portfolioLink" href="#">
+                    <div class="overlay">
+                        <p>Amazon Upholstery</p>
+                    </div>
+                    <img
+                        src="images/projectThumbs/amazonUpholsteryThumb.png"
+                        alt="White Chair"
+                    />
+                </a>
+            </div>
+            <div class="thumbnail">
+                <a class="portfolioLink" href="#">
+                    <div class="overlay">
+                        <p>Amazon Upholstery</p>
+                    </div>
+                    <img
+                        src="images/projectThumbs/amazonUpholsteryThumb.png"
+                        alt="Black Chair"
+                    />
+                </a>
+            </div>
+            <div class="thumbnail">
+                <a class="portfolioLink" href="#">
+                    <div class="overlay">
+                        <p>Amazon Upholstery</p>
+                    </div>
+                    <img
+                        src="images/projectThumbs/amazonUpholsteryThumb.png"
+                        alt="Black Chair"
+                    />
+                </a>
             </div>
         </div>
         <script>
