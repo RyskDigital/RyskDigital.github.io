@@ -1,0 +1,99 @@
+.projectContainer {
+  position: relative;
+  left: 25rem;
+  top: 4rem;
+  width: calc(100% - 28rem);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.projectContainer img {
+  max-height: 95vh;
+  max-width: calc(100% - 8rem);
+  border-radius: 2rem;
+  margin: 2rem 4rem;
+}
+
+.projectContainer h3 {
+  margin: 1rem 4rem;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+  text-align: center;
+  color: var(--textColorDark);
+  background-color: var(--backgroundColorLight);
+  padding: 1rem 3rem;
+  border-radius: 1rem 3rem;
+}
+
+.projectContainer p {
+  max-width: 65%;
+  margin: 1.25rem 4rem;
+  font-size: 1.25rem;
+  font-weight: 300;
+  text-align: center;
+  color: var(--textColorLight);
+}
+
+.projectContainer ul {
+  margin: 0 4rem;
+  list-style-type: disc;
+}
+
+.projectContainer li {
+  display: inline-block;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--textColor);
+}
+
+.projectContainer .columnContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.screenImageOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background-color: var(--navBarBackgroundColor);
+}
+
+.screenImageOverlay img {
+  margin: 4em 8em 1em 4em;
+  max-height: calc(100% - 8em);
+  max-width: calc(100% - 16em);
+}
+
+.screenImageOverlay .caption {
+  font-size: 1.5em;
+  color: var(--textColorLight);
+}
+/*# sourceMappingURL=projectPages.css.map */

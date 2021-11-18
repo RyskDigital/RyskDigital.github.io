@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ryszard Klimczewski - Technical 3D Artist</title>
+        <link rel="icon" href="images/ryskDigitalFavicon.png" />
+        <link rel="stylesheet" href="../css/main.css" />
+        <link rel="stylesheet" href="../css/projectPages.css" />
+        <script type="text/javascript" src="../main.js"></script>
+    </head>
+
+    <body>
+        <div class="navBar">
+            <div class="header">
+                <img
+                    class="mainLogo"
+                    src="../images/ryskDigitalLogoDark.png"
+                    alt=""
+                />
+                <div class="headerTitles">
+                    <h1 class="artistName">Ryszard Klimczewski</h1>
+                    <h2 class="artistTitle">Technical 3D Artist</h2>
+                </div>
+            </div>
+            <div id="navigationMenu" class="body">
+                <div class="closeButton" onclick="hideNavigationMenu()">
+                    <p>X</p>
+                </div>
+                <ul>
+                    <li>
+                        <a class="sideBarNavLink" href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a class="sideBarNavLink" href="../Portfolio.html"
+                            >Portfolio</a
+                        >
+                    </li>
+                    <li>
+                        <a class="sideBarNavLink" href="../Resume.html"
+                            >Resume</a
+                        >
+                    </li>
+                </ul>
+            </div>
+            <div class="menuButton" onclick="displayNavigationMenu()">
+                <p>Menu</p>
+            </div>
+            <div class="footer">
+                <p>&copy; Ryszard Klimczewski, 2021</p>
+            </div>
+        </div>
+        <div class="projectContainer">
+            <h3>Amazon Upholstery</h3>
+            <p>
+                Mid-poly upholstery assets I created for multiple platforms
+                during my time at Amazon.
+            </p>
+            <ul>
+                <li>Modeling: Maya, ZBrush -</li>
+                <li>Texturing: Substance Painter -</li>
+                <li>Rendering: IRay</li>
+            </ul>
+            <img
+                src="../images/amazonUpholstery/amazonUpholstery01.png"
+                alt="Black Chair"
+            />
+            <img
+                src="../images/amazonUpholstery/amazonUpholstery02.png"
+                alt="White Chair"
+            />
+            <img
+                src="../images/amazonUpholstery/amazonUpholstery03.png"
+                alt="Beige Recliner"
+            />
+            <img
+                src="../images/amazonUpholstery/amazonUpholstery04.png"
+                alt="Blue Recliner"
+            />
+            <img
+                src="../images/amazonUpholstery/amazonUpholstery05.png"
+                alt="Beige Recliner Sofa"
+            />
+            <img
+                src="../images/amazonUpholstery/amazonUpholstery06.png"
+                alt="Blue Recliner Sofa"
+            />
+            <img
+                src="../images/amazonUpholstery/amazonUpholstery07.png"
+                alt="Brown Leather Recliner Sofa"
+            />
+            <img
+                src="../images/amazonUpholstery/amazonUpholstery08.png"
+                alt="Brown Leather Recliner Sofa - Open"
+            />
+        </div>
+        <div class="screenImageOverlay">
+            <img
+                id="overlayImage"
+                src="../images/amazonUpholstery/amazonUpholstery01.png"
+                alt=""
+            />
+            <div class="caption">Black Chair</div>
+        </div>
+
+        <script>
+            styleCurrentNavLink();
+        </script>
+    </body>
+</html>
