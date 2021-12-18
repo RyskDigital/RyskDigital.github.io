@@ -76,6 +76,7 @@ ul {
         flex-direction: row;
         justify-content: flex-end;
         flex-grow: 1;
+        margin-right: 2em;
     }
 
     .site-logo {
@@ -186,7 +187,6 @@ ul {
 
         .mobile-menu-button {
             display: flex;
-            margin-right: 2em;
 
             .svg-container:hover {
                 cursor: pointer;

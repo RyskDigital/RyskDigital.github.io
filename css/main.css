@@ -102,6 +102,7 @@ ul {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  margin-right: 2em;
 }
 
 .navigation-bar .site-logo {
@@ -223,7 +224,6 @@ ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-right: 2em;
   }
   .navigation-bar .mobile-menu-button .svg-container:hover {
     cursor: pointer;
