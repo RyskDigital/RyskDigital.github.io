@@ -27,6 +27,8 @@
   display: block;
   overflow: hidden;
   border-radius: 1rem;
+  -webkit-box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.35);
+          box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.35);
 }
 
 .portfolioGallery .thumbnail .portfolioLink .overlay {
@@ -43,7 +45,7 @@
   width: 100%;
   height: 0;
   bottom: 0;
-  background-color: var(--backgroundColorLight);
+  background-color: var(--background-color-light);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
@@ -51,7 +53,7 @@
 .portfolioGallery .thumbnail .portfolioLink .overlay p {
   margin: 0;
   text-align: center;
-  color: var(--textColorLight);
+  color: var(--text-color-light);
   -webkit-transform: scaleY(0);
           transform: scaleY(0);
   -webkit-transition: 0.5s;
@@ -62,7 +64,7 @@
 .portfolioGallery .thumbnail .portfolioLink img {
   display: block;
   width: calc(100% - 2px);
-  border: 1px solid var(--backgroundColor);
+  border: 1px solid var(--background-color);
   border-radius: inherit;
 }
 

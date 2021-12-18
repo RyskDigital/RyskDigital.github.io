@@ -1,5 +1,7 @@
 function changeBackgroundImage() {
-    let slideElement = document.getElementsByClassName("homePageSlideBlock")[0];
+    let slideElement = document.getElementsByClassName(
+        "home-page-slide-block"
+    )[0];
     let computedStyle = getComputedStyle(slideElement);
     let currentBackgroundImage =
         computedStyle.getPropertyValue("background-image");
@@ -30,22 +32,22 @@ function changeBackgroundImage() {
 function styleCurrentNavLink() {
     if (location.pathname == "/") {
         let homePageLink = document.getElementById("homeLink");
-        homePageLink.classList.add("currentPage");
+        homePageLink.classList.add("current-page");
     }
-    let navLinks = document.getElementsByClassName("sideBarNavLink");
+    let navLinks = document.getElementsByClassName("navigation-link");
     for (let item of navLinks) {
         if (location.pathname.includes("/" + item.getAttribute("href"))) {
-            item.classList.add("currentPage");
+            item.classList.add("current-page");
         }
     }
 }
 
 function displayNavigationMenu() {
-    let navigationMenu = document.getElementById("navigationMenu");
-    navigationMenu.classList.add("menuOpen");
+    let navigationMenu = document.getElementById("navigation-menu");
+    navigationMenu.classList.add("menu-open");
 }
 
 function hideNavigationMenu() {
-    let navigationMenu = document.getElementById("navigationMenu");
-    navigationMenu.classList.remove("menuOpen");
+    let navigationMenu = document.getElementById("navigation-menu");
+    navigationMenu.classList.remove("menu-open");
 }

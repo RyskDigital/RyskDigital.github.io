@@ -11,38 +11,43 @@
 
     img {
         max-height: 95vh;
-        max-width: calc(100% - 8rem);
+        // max-width: calc(100% - 2rem);
+        max-width: 100%;
         border-radius: 2rem;
-        margin: 2rem 4rem;
+        margin: 2rem 0;
+        box-shadow: 0 0.5rem 1.5rem 0 rgba($color: #000000, $alpha: 0.35);
+        flex-grow: 1;
     }
     h3 {
-        margin: 1rem 4rem;
+        margin: 1rem 0;
         font-size: 2rem;
         font-weight: bold;
         letter-spacing: 0.15rem;
         text-align: center;
-        color: var(--textColorDark);
-        background-color: var(--backgroundColorLight);
+        color: var(--text-color-dark);
+        background-color: var(--background-color-light);
         padding: 1rem 3rem;
         border-radius: 1rem 3rem;
     }
     p {
-        max-width: 65%;
-        margin: 1.25rem 4rem;
+        // max-width: 65%;
+        margin: 1.25rem 0;
         font-size: 1.25rem;
         font-weight: 300;
         text-align: center;
-        color: var(--textColorLight);
+        color: var(--text-color-light);
+        // flex-grow: 1;
     }
     ul {
-        margin: 0 4rem;
+        // margin: 0 4rem;
+        margin: 0;
         list-style-type: disc;
     }
     li {
         display: inline-block;
         text-align: center;
         font-size: 1rem;
-        color: var(--textColor);
+        color: var(--text-color);
     }
     .columnContainer {
         display: flex;
@@ -59,7 +64,7 @@
     z-index: 2;
     width: 100%;
     height: 100%;
-    background-color: var(--navBarBackgroundColor);
+    background-color: var(--navigation-bar-background-color);
 
     img {
         margin: 4em 8em 1em 4em;
@@ -68,7 +73,7 @@
     }
     .caption {
         font-size: 1.5em;
-        color: var(--textColorLight);
+        color: var(--text-color-light);
     }
 }
 .textureSwatch {
@@ -89,19 +94,16 @@
     .swatchImageAO {
         opacity: 0;
         transition: 0.4s;
-        // clip-path: polygon(100% 0, 100% 0, 0 100%, 0 100%);
         clip-path: polygon(25% 0, 50% 0, 50% 0, 25% 0);
     }
     .swatchImageN {
         opacity: 0;
-        transition: 0.6s;
-        // clip-path: polygon(100% 40%, 100% 40%, 40% 100%, 40% 100%);
+        transition: 0.5s;
         clip-path: polygon(50% 0, 75% 0, 75% 0, 50% 0);
     }
     .swatchImageR {
         opacity: 0;
-        transition: 0.8s;
-        // clip-path: polygon(100% 100%, 100% 100%, 100% 100%);
+        transition: 0.6s;
         clip-path: polygon(75% 0, 100% 0, 100% 0, 75% 0);
     }
 }
@@ -111,15 +113,62 @@
     }
 
     .swatchImageAO {
-        // clip-path: polygon(60% 0, 100% 0, 0 100%, 0 60%);
         clip-path: polygon(25% 0, 50% 0, 50% 100%, 25% 100%);
     }
     .swatchImageN {
-        // clip-path: polygon(100% 0, 100% 40%, 40% 100%, 0 100%);
         clip-path: polygon(50% 0, 75% 0, 75% 100%, 50% 100%);
     }
     .swatchImageR {
-        // clip-path: polygon(100% 40%, 40% 100%, 100% 100%);
         clip-path: polygon(75% 0, 100% 0, 100% 100%, 75% 100%);
+    }
+}
+
+@media screen and (max-width: 1180px) {
+    .navigation-bar {
+        flex-direction: row;
+        height: 6em;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+
+        .logo-and-titles-container {
+            margin: 0;
+            margin-left: 1em;
+            align-items: center;
+        }
+        .artist-name {
+            margin-top: 0;
+        }
+
+        .mobile-menu-button {
+            display: flex;
+        }
+
+        .nav-menu-links-container {
+            position: fixed;
+            width: 9em;
+            height: 100%;
+            right: 0;
+            background-color: var(--background-color-dark);
+            padding: 4em 1em 0 0;
+            display: block;
+            display: none;
+
+            ul {
+                text-align: right;
+            }
+
+            .close-navigation-button {
+                display: block;
+            }
+        }
+
+        .menu-open {
+            display: block;
+        }
+
+        .navigation-menu-footer {
+            display: none;
+        }
     }
 }

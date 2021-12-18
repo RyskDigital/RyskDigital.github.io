@@ -14,45 +14,61 @@
     </head>
 
     <body>
-        <div class="navBar">
-            <div class="header">
+        <nav class="navigation-bar">
+            <div class="logo-and-titles-container">
                 <img
-                    class="mainLogo"
+                    class="site-logo"
                     src="../images/ryskDigitalLogoDark.png"
                     alt=""
                 />
-                <div class="headerTitles">
-                    <h1 class="artistName">Ryszard Klimczewski</h1>
-                    <h2 class="artistTitle">Technical 3D Artist</h2>
+                <div>
+                    <h1 class="artist-name">Ryszard Klimczewski</h1>
+                    <h2 class="artist-title">Technical 3D Artist</h2>
                 </div>
             </div>
-            <div id="navigationMenu" class="body">
-                <div class="closeButton" onclick="hideNavigationMenu()">
+            <div id="navigation-menu" class="nav-menu-links-container">
+                <div
+                    class="close-navigation-button"
+                    onclick="hideNavigationMenu()"
+                >
                     <p>X</p>
                 </div>
                 <ul>
                     <li>
-                        <a class="sideBarNavLink" href="../index.html">Home</a>
+                        <a class="navigation-link" href="../index.html">Home</a>
                     </li>
                     <li>
-                        <a class="sideBarNavLink" href="../Portfolio.html"
-                            >Portfolio</a
-                        >
+                        <a class="navigation-link" href="../Portfolio.html">
+                            Portfolio
+                        </a>
                     </li>
                     <li>
-                        <a class="sideBarNavLink" href="../Resume.html"
+                        <a class="navigation-link" href="../Resume.html"
                             >Resume</a
                         >
                     </li>
                 </ul>
             </div>
-            <div class="menuButton" onclick="displayNavigationMenu()">
-                <p>Menu</p>
+            <div class="mobile-menu-button">
+                <div class="svg-container" onclick="displayNavigationMenu()">
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="40"
+                        height="24.286"
+                        viewBox="0 0 40 24.286"
+                    >
+                        <path
+                            id="menuIcon"
+                            d="M2.143,24.286a2.143,2.143,0,0,1,0-4.286H37.857a2.143,2.143,0,0,1,0,4.286Zm0-10a2.143,2.143,0,0,1,0-4.286H37.857a2.143,2.143,0,0,1,0,4.286Zm0-10A2.143,2.143,0,0,1,2.143,0H37.857a2.143,2.143,0,0,1,0,4.286Z"
+                            fill="#979797"
+                        />
+                    </svg>
+                </div>
             </div>
-            <div class="footer">
+            <div class="navigation-menu-footer">
                 <p>&copy; Ryszard Klimczewski, 2021</p>
             </div>
-        </div>
+        </nav>
         <div class="projectContainer">
             <h3>Concrete Tiles</h3>
             <p>

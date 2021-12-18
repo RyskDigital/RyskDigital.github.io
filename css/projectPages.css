@@ -21,34 +21,38 @@
 
 .projectContainer img {
   max-height: 95vh;
-  max-width: calc(100% - 8rem);
+  max-width: 100%;
   border-radius: 2rem;
-  margin: 2rem 4rem;
+  margin: 2rem 0;
+  -webkit-box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.35);
+          box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.35);
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 .projectContainer h3 {
-  margin: 1rem 4rem;
+  margin: 1rem 0;
   font-size: 2rem;
   font-weight: bold;
   letter-spacing: 0.15rem;
   text-align: center;
-  color: var(--textColorDark);
-  background-color: var(--backgroundColorLight);
+  color: var(--text-color-dark);
+  background-color: var(--background-color-light);
   padding: 1rem 3rem;
   border-radius: 1rem 3rem;
 }
 
 .projectContainer p {
-  max-width: 65%;
-  margin: 1.25rem 4rem;
+  margin: 1.25rem 0;
   font-size: 1.25rem;
   font-weight: 300;
   text-align: center;
-  color: var(--textColorLight);
+  color: var(--text-color-light);
 }
 
 .projectContainer ul {
-  margin: 0 4rem;
+  margin: 0;
   list-style-type: disc;
 }
 
@@ -56,7 +60,7 @@
   display: inline-block;
   text-align: center;
   font-size: 1rem;
-  color: var(--textColor);
+  color: var(--text-color);
 }
 
 .projectContainer .columnContainer {
@@ -83,7 +87,7 @@
   z-index: 2;
   width: 100%;
   height: 100%;
-  background-color: var(--navBarBackgroundColor);
+  background-color: var(--navigation-bar-background-color);
 }
 
 .screenImageOverlay img {
@@ -94,7 +98,7 @@
 
 .screenImageOverlay .caption {
   font-size: 1.5em;
-  color: var(--textColorLight);
+  color: var(--text-color-light);
 }
 
 .textureSwatch {
@@ -131,16 +135,16 @@
 
 .textureSwatch .swatchImageN {
   opacity: 0;
-  -webkit-transition: 0.6s;
-  transition: 0.6s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
   -webkit-clip-path: polygon(50% 0, 75% 0, 75% 0, 50% 0);
           clip-path: polygon(50% 0, 75% 0, 75% 0, 50% 0);
 }
 
 .textureSwatch .swatchImageR {
   opacity: 0;
-  -webkit-transition: 0.8s;
-  transition: 0.8s;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
   -webkit-clip-path: polygon(75% 0, 100% 0, 100% 0, 75% 0);
           clip-path: polygon(75% 0, 100% 0, 100% 0, 75% 0);
 }
@@ -162,5 +166,55 @@
 .textureSwatch:hover .swatchImageR {
   -webkit-clip-path: polygon(75% 0, 100% 0, 100% 100%, 75% 100%);
           clip-path: polygon(75% 0, 100% 0, 100% 100%, 75% 100%);
+}
+
+@media screen and (max-width: 1180px) {
+  .navigation-bar {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: 6em;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .navigation-bar .logo-and-titles-container {
+    margin: 0;
+    margin-left: 1em;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .navigation-bar .artist-name {
+    margin-top: 0;
+  }
+  .navigation-bar .mobile-menu-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .navigation-bar .nav-menu-links-container {
+    position: fixed;
+    width: 9em;
+    height: 100%;
+    right: 0;
+    background-color: var(--background-color-dark);
+    padding: 4em 1em 0 0;
+    display: block;
+    display: none;
+  }
+  .navigation-bar .nav-menu-links-container ul {
+    text-align: right;
+  }
+  .navigation-bar .nav-menu-links-container .close-navigation-button {
+    display: block;
+  }
+  .navigation-bar .menu-open {
+    display: block;
+  }
+  .navigation-bar .navigation-menu-footer {
+    display: none;
+  }
 }
 /*# sourceMappingURL=projectPages.css.map */

@@ -1,28 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 
 :root {
-    --backgroundColor: #262626;
-    --backgroundColorLight: #979797;
-    --backgroundColorDark: #1e1e1e;
-    --navBarBackgroundColor: rgb(10, 10, 10, 0.8);
-    --primaryAccentColor: #ff861b;
-    --textColor: #979797;
-    --textColorLight: #d9d9d9;
-    --textColorDark: #1a1a1a;
+    --background-color: #262626;
+    --background-color-light: #979797;
+    --background-color-dark: #1e1e1e;
+    --navigation-bar-background-color: rgb(10, 10, 10, 0.8);
+    --primary-accent-color: #ff861b;
+    --text-color: #979797;
+    --text-color-light: #d9d9d9;
+    --text-color-dark: #1a1a1a;
 }
 
-html,
-body {
+html {
     margin: 0;
     font-family: "Rubik";
     height: 100%;
     width: 100%;
-    background-color: var(--backgroundColor);
+    background-color: var(--background-color);
 }
 
 body {
-    position: relative;
-    z-index: 0;
+    margin: 0;
 }
 
 ul {
@@ -31,27 +29,28 @@ ul {
     padding: 0;
 }
 
-.navBar {
+.navigation-bar {
     position: fixed;
+    top: 0;
     left: 2em;
     z-index: 2;
-    background-color: var(--navBarBackgroundColor);
+    background-color: var(--navigation-bar-background-color);
     display: flex;
     flex-direction: column;
-    height: inherit;
     height: 100%;
     max-width: fit-content;
+    box-shadow: 0 0 1.5rem 0 rgba($color: #000000, $alpha: 0.35);
 
-    .header {
+    .logo-and-titles-container {
         display: flex;
         flex-direction: row;
         margin: 4em 1.5em 1.5em 1.5em;
     }
 
-    .body {
+    .nav-menu-links-container {
         flex-grow: 1;
 
-        .closeButton {
+        .close-navigation-button {
             display: none;
             position: fixed;
             top: 0.75em;
@@ -59,78 +58,64 @@ ul {
             font-weight: bold;
             font-size: 1.2em;
             p {
-                color: var(--textColor);
+                color: var(--text-color);
                 margin: 0;
                 cursor: pointer;
                 transition: 0.5s;
 
                 &:hover {
-                    color: var(--primaryAccentColor);
+                    color: var(--primary-accent-color);
                 }
             }
         }
     }
 
-    .menuButton {
+    .mobile-menu-button {
         display: none;
-        color: var(--textColor);
         align-self: center;
         flex-direction: row;
         justify-content: flex-end;
         flex-grow: 1;
-
-        p {
-            cursor: pointer;
-            margin-right: 2em;
-            font-weight: 300;
-            font-size: 1.4em;
-            transition: 0.5s;
-            max-width: fit-content;
-
-            &:hover {
-                color: var(--primaryAccentColor);
-            }
-        }
     }
 
-    .mainLogo {
+    .site-logo {
         width: 70px;
         height: 70px;
         border-radius: 35px;
         margin-right: 0.5em;
     }
 
-    .artistName {
+    .artist-name {
         font-style: italic;
         font-size: 1.25em;
         font-weight: 400;
         margin: 0;
         margin-top: 0.65em;
-        color: var(--primaryAccentColor);
+        color: var(--primary-accent-color);
     }
 
-    .artistTitle {
+    .artist-title {
         font-size: 1em;
         font-weight: 400;
         margin: 0;
         margin-left: 1.2em;
-        color: var(--textColorLight);
+        color: var(--text-color-light);
     }
 
-    .sideBarNavLink {
+    .navigation-link {
         font-weight: 300;
         font-size: 1.4em;
         text-decoration: none;
-        color: var(--textColor);
+        color: var(--text-color);
         transition: 0.5s;
 
         &:hover {
-            color: var(--primaryAccentColor);
+            color: var(--primary-accent-color);
         }
     }
 
-    .currentPage {
-        color: var(--primaryAccentColor);
+    .current-page {
+        color: var(--primary-accent-color);
     }
 
     li {
@@ -138,8 +123,8 @@ ul {
         margin-left: 1.5em;
     }
 
-    .footer {
-        color: var(--textColor);
+    .navigation-menu-footer {
+        color: var(--text-color);
 
         p {
             font-style: italic;
@@ -149,7 +134,7 @@ ul {
     }
 }
 
-.homePageSlideBlock {
+.home-page-slide-block {
     position: absolute;
     top: 0;
     left: 0;
@@ -179,32 +164,44 @@ ul {
 }
 
 @media screen and (max-width: 750px) {
-    .navBar {
+    .home-page-slide-block {
+        background-position: 58% center;
+    }
+
+    .navigation-bar {
         flex-direction: row;
         height: 6em;
         left: 0;
         width: 100%;
         max-width: 100%;
 
-        .header {
+        .logo-and-titles-container {
             margin: 0;
             margin-left: 1em;
             align-items: center;
         }
-        .artistName {
+        .artist-name {
             margin-top: 0;
         }
 
-        .menuButton {
+        .mobile-menu-button {
             display: flex;
+            margin-right: 2em;
+
+            .svg-container:hover {
+                cursor: pointer;
+                path {
+                    fill: var(--primary-accent-color);
+                }
+            }
         }
 
-        .body {
+        .nav-menu-links-container {
             position: fixed;
             width: 9em;
             height: 100%;
             right: 0;
-            background-color: var(--backgroundColorDark);
+            background-color: var(--background-color-dark);
             padding: 4em 1em 0 0;
             display: block;
             display: none;
@@ -213,16 +210,16 @@ ul {
                 text-align: right;
             }
 
-            .closeButton {
+            .close-navigation-button {
                 display: block;
             }
         }
 
-        .menuOpen {
+        .menu-open {
             display: block;
         }
 
-        .footer {
+        .navigation-menu-footer {
             display: none;
         }
     }

@@ -1,27 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
 :root {
-  --backgroundColor: #262626;
-  --backgroundColorLight: #979797;
-  --backgroundColorDark: #1e1e1e;
-  --navBarBackgroundColor: rgb(10, 10, 10, 0.8);
-  --primaryAccentColor: #ff861b;
-  --textColor: #979797;
-  --textColorLight: #d9d9d9;
-  --textColorDark: #1a1a1a;
+  --background-color: #262626;
+  --background-color-light: #979797;
+  --background-color-dark: #1e1e1e;
+  --navigation-bar-background-color: rgb(10, 10, 10, 0.8);
+  --primary-accent-color: #ff861b;
+  --text-color: #979797;
+  --text-color-light: #d9d9d9;
+  --text-color-dark: #1a1a1a;
 }
 
-html,
-body {
+html {
   margin: 0;
   font-family: "Rubik";
   height: 100%;
   width: 100%;
-  background-color: var(--backgroundColor);
+  background-color: var(--background-color);
 }
 
 body {
-  position: relative;
-  z-index: 0;
+  margin: 0;
 }
 
 ul {
@@ -30,11 +28,12 @@ ul {
   padding: 0;
 }
 
-.navBar {
+.navigation-bar {
   position: fixed;
+  top: 0;
   left: 2em;
   z-index: 2;
-  background-color: var(--navBarBackgroundColor);
+  background-color: var(--navigation-bar-background-color);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,14 +41,15 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: inherit;
   height: 100%;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
+  -webkit-box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.35);
+          box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.35);
 }
 
-.navBar .header {
+.navigation-bar .logo-and-titles-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -60,13 +60,13 @@ ul {
   margin: 4em 1.5em 1.5em 1.5em;
 }
 
-.navBar .body {
+.navigation-bar .nav-menu-links-container {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
 
-.navBar .body .closeButton {
+.navigation-bar .nav-menu-links-container .close-navigation-button {
   display: none;
   position: fixed;
   top: 0.75em;
@@ -75,21 +75,20 @@ ul {
   font-size: 1.2em;
 }
 
-.navBar .body .closeButton p {
-  color: var(--textColor);
+.navigation-bar .nav-menu-links-container .close-navigation-button p {
+  color: var(--text-color);
   margin: 0;
   cursor: pointer;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.navBar .body .closeButton p:hover {
-  color: var(--primaryAccentColor);
+.navigation-bar .nav-menu-links-container .close-navigation-button p:hover {
+  color: var(--primary-accent-color);
 }
 
-.navBar .menuButton {
+.navigation-bar .mobile-menu-button {
   display: none;
-  color: var(--textColor);
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -105,79 +104,63 @@ ul {
           flex-grow: 1;
 }
 
-.navBar .menuButton p {
-  cursor: pointer;
-  margin-right: 2em;
-  font-weight: 300;
-  font-size: 1.4em;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  max-width: -webkit-fit-content;
-  max-width: -moz-fit-content;
-  max-width: fit-content;
-}
-
-.navBar .menuButton p:hover {
-  color: var(--primaryAccentColor);
-}
-
-.navBar .mainLogo {
+.navigation-bar .site-logo {
   width: 70px;
   height: 70px;
   border-radius: 35px;
   margin-right: 0.5em;
 }
 
-.navBar .artistName {
+.navigation-bar .artist-name {
   font-style: italic;
   font-size: 1.25em;
   font-weight: 400;
   margin: 0;
   margin-top: 0.65em;
-  color: var(--primaryAccentColor);
+  color: var(--primary-accent-color);
 }
 
-.navBar .artistTitle {
+.navigation-bar .artist-title {
   font-size: 1em;
   font-weight: 400;
   margin: 0;
   margin-left: 1.2em;
-  color: var(--textColorLight);
+  color: var(--text-color-light);
 }
 
-.navBar .sideBarNavLink {
+.navigation-bar .navigation-link {
   font-weight: 300;
   font-size: 1.4em;
   text-decoration: none;
-  color: var(--textColor);
+  color: var(--text-color);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.navBar .sideBarNavLink:hover {
-  color: var(--primaryAccentColor);
+.navigation-bar .navigation-link:hover {
+  color: var(--primary-accent-color);
 }
 
-.navBar .currentPage {
-  color: var(--primaryAccentColor);
+.navigation-bar .current-page {
+  color: var(--primary-accent-color);
 }
 
-.navBar li {
+.navigation-bar li {
   margin: 1.2em;
   margin-left: 1.5em;
 }
 
-.navBar .footer {
-  color: var(--textColor);
+.navigation-bar .navigation-menu-footer {
+  color: var(--text-color);
 }
 
-.navBar .footer p {
+.navigation-bar .navigation-menu-footer p {
   font-style: italic;
   margin-left: 1.6em;
   font-size: 0.9em;
 }
 
-.homePageSlideBlock {
+.home-page-slide-block {
   position: absolute;
   top: 0;
   left: 0;
@@ -213,7 +196,10 @@ ul {
 }
 
 @media screen and (max-width: 750px) {
-  .navBar {
+  .home-page-slide-block {
+    background-position: 58% center;
+  }
+  .navigation-bar {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -223,41 +209,48 @@ ul {
     width: 100%;
     max-width: 100%;
   }
-  .navBar .header {
+  .navigation-bar .logo-and-titles-container {
     margin: 0;
     margin-left: 1em;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
   }
-  .navBar .artistName {
+  .navigation-bar .artist-name {
     margin-top: 0;
   }
-  .navBar .menuButton {
+  .navigation-bar .mobile-menu-button {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-right: 2em;
   }
-  .navBar .body {
+  .navigation-bar .mobile-menu-button .svg-container:hover {
+    cursor: pointer;
+  }
+  .navigation-bar .mobile-menu-button .svg-container:hover path {
+    fill: var(--primary-accent-color);
+  }
+  .navigation-bar .nav-menu-links-container {
     position: fixed;
     width: 9em;
     height: 100%;
     right: 0;
-    background-color: var(--backgroundColorDark);
+    background-color: var(--background-color-dark);
     padding: 4em 1em 0 0;
     display: block;
     display: none;
   }
-  .navBar .body ul {
+  .navigation-bar .nav-menu-links-container ul {
     text-align: right;
   }
-  .navBar .body .closeButton {
+  .navigation-bar .nav-menu-links-container .close-navigation-button {
     display: block;
   }
-  .navBar .menuOpen {
+  .navigation-bar .menu-open {
     display: block;
   }
-  .navBar .footer {
+  .navigation-bar .navigation-menu-footer {
     display: none;
   }
 }
