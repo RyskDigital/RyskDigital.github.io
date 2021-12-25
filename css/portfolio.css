@@ -5,21 +5,15 @@
   width: calc(100% - 28em);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
 }
 
 .portfolioGallery .thumbnail {
   position: relative;
-  -ms-flex-preferred-size: calc(100% / 4);
-      flex-basis: calc(100% / 4);
-  max-width: calc(100% / 4);
-  padding: 1rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .portfolioGallery .thumbnail .portfolioLink {
@@ -68,38 +62,42 @@
   border-radius: inherit;
 }
 
-.portfolioGallery .thumbnail .portfolioLink:hover .overlay {
-  height: calc(50% - 2rem);
-}
-
-.portfolioGallery .thumbnail .portfolioLink:hover .overlay p {
-  -webkit-transform: scaleY(1);
-          transform: scaleY(1);
-}
-
 @media screen and (max-width: 1750px) {
-  .thumbnail {
-    min-width: calc(100% / 3);
+  .portfolioGallery {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media screen and (max-width: 1250px) {
-  .thumbnail {
-    min-width: calc(100% / 2);
+  .portfolioGallery {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 950px) {
-  .thumbnail {
-    min-width: 100%;
+  .portfolioGallery {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
 }
 
 @media screen and (max-width: 750px) {
   .portfolioGallery {
-    left: 2em;
-    top: 6.5em;
+    left: 2rem;
+    top: 8rem;
     width: calc(100% - 4em);
+  }
+}
+
+@media (hover: hover) {
+  .portfolioGallery .thumbnail .portfolioLink:hover .overlay {
+    height: calc(50% - 2rem);
+  }
+  .portfolioGallery .thumbnail .portfolioLink:hover .overlay p {
+    -webkit-transform: scaleY(1);
+            transform: scaleY(1);
   }
 }
 /*# sourceMappingURL=portfolio.css.map */
