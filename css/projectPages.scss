@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 .projectContainer {
     position: relative;
     left: 25rem;
@@ -31,23 +34,44 @@
     p {
         margin: 1.25rem 0;
         font-size: 1.25rem;
+        line-height: 1.25;
         font-weight: 300;
         text-align: center;
         color: var(--text-color-light);
+        max-width: 60ch;
     }
     ul {
         margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         list-style-type: disc;
     }
     li {
-        display: inline-block;
-        text-align: center;
+        margin: 0.25rem 1rem;
         font-size: 1rem;
         color: var(--text-color);
     }
     .columnContainer {
         display: flex;
         align-items: baseline;
+    }
+    .project-page-footer{
+        display: grid;
+        grid-auto-flow: column;
+
+        .navigation-link {
+            font-weight: 300;
+            font-size: 1.4em;
+            text-decoration: none;
+            color: var(--text-color);
+            transition: 0.5s;
+            margin: 1rem;
+    
+            &:hover {
+                color: var(--primary-accent-color);
+            }
+        }
     }
 }
 .screenImageOverlay {
@@ -74,11 +98,10 @@
 }
 .textureSwatch {
     display: grid;
-    margin: 2rem 0;
     grid-template-columns: 1fr;
 
     img {
-        margin: 0;
+        margin: 2rem 0 0 0;
         grid-row: 1;
         grid-column: 1/2;
     }
@@ -120,6 +143,11 @@
         left: 2rem;
         top: 7rem;
         width: calc(100% - 4rem);
+
+        img {
+            border-radius: 1rem;
+            margin: 1rem 0 0 0;
+        }
     }
 
     .navigation-bar {
