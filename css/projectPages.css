@@ -2,7 +2,7 @@ html {
   scroll-behavior: smooth;
 }
 
-.projectContainer {
+.project-container {
   position: relative;
   left: 25rem;
   top: 4rem;
@@ -11,7 +11,7 @@ html {
           box-sizing: border-box;
   display: -ms-grid;
   display: grid;
-  row-gap: 2rem;
+  gap: 2rem;
   justify-items: center;
 }
 
@@ -60,6 +60,7 @@ html {
 .project-card p {
   margin: 0 2rem 2rem;
   max-width: 60ch;
+  line-height: 1.6;
 }
 
 .title-container {
@@ -68,9 +69,9 @@ html {
   grid-auto-flow: column;
   -ms-grid-columns: 100px auto;
       grid-template-columns: 100px auto;
+  max-width: 95vh;
   width: 100%;
-  -webkit-column-gap: 2rem;
-          column-gap: 2rem;
+  gap: 2rem;
 }
 
 .title-container .project-title {
@@ -78,7 +79,6 @@ html {
   font-size: 3rem;
   font-weight: bold;
   letter-spacing: 0.15rem;
-  text-align: center;
   color: var(--text-color-light);
   -ms-grid-column-align: start;
       justify-self: start;
@@ -200,7 +200,7 @@ html {
 }
 
 @media screen and (max-width: 1180px) {
-  .projectContainer {
+  .project-container {
     left: 2rem;
     top: 8rem;
     width: calc(100% - 4rem);
@@ -255,7 +255,20 @@ html {
 }
 
 @media screen and (max-width: 650px) {
+  .project-container {
+    gap: 1rem;
+  }
+  .title-container {
+    gap: 1rem;
+  }
+  .title-container .project-graphic {
+    width: 85px;
+  }
+  .title-container .project-title {
+    font-size: 2rem;
+  }
   .info-section {
+    gap: 1rem;
     grid-template: "desc" "img1" "software" "img2" "aspects";
   }
   .info-section img {

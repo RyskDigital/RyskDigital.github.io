@@ -2,14 +2,14 @@ html {
     scroll-behavior: smooth;
 }
 
-.projectContainer {
+.project-container {
     position: relative;
     left: 25rem;
     top: 4rem;
     width: calc(100% - 28rem);
     box-sizing: border-box;
     display: grid;
-    row-gap: 2rem;
+    gap: 2rem;
     justify-items: center;
 }
 
@@ -35,7 +35,7 @@ html {
     h4 {
         color: var(--primary-accent-color);
         font-size: 1.5rem;
-        margin: 2rem
+        margin: 2rem;
     }
 
     ul {
@@ -51,6 +51,7 @@ html {
     p {
         margin: 0 2rem 2rem;
         max-width: 60ch;
+        line-height: 1.6;
     }
 }
 
@@ -58,15 +59,16 @@ html {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 100px auto;
+    max-width: 95vh;
     width: 100%;
-    column-gap: 2rem;
+    gap: 2rem;
 
     .project-title {
         margin: 0;
         font-size: 3rem;
         font-weight: bold;
         letter-spacing: 0.15rem;
-        text-align: center;
+        // text-align: center;
         color: var(--text-color-light);
         justify-self: start;
         align-self: center;
@@ -79,8 +81,7 @@ html {
     display: grid;
     grid-template:
         "desc software"
-        "desc aspects"
-    ;
+        "desc aspects";
     gap: 2rem;
 
     img {
@@ -173,7 +174,7 @@ html {
 }
 
 @media screen and (max-width: 1180px) {
-    .projectContainer {
+    .project-container {
         left: 2rem;
         top: 8rem;
         width: calc(100% - 4rem);
@@ -230,14 +231,30 @@ html {
 }
 
 @media screen and (max-width: 650px) {
+    .project-container {
+        gap: 1rem;
+    }
+
+    .title-container {
+        gap: 1rem;
+
+        .project-graphic {
+            width: 85px;
+        }
+
+        .project-title {
+            font-size: 2rem;
+        }
+    }
+
     .info-section {
+        gap: 1rem;
         grid-template:
             "desc"
             "img1"
             "software"
             "img2"
-            "aspects"
-        ;
+            "aspects";
 
         img {
             display: block;
@@ -279,5 +296,4 @@ html {
             padding: 0 0.5rem;
         }
     }
-
 }
