@@ -57,6 +57,7 @@ ul {
             right: 0.75em;
             font-weight: bold;
             font-size: 1.2em;
+
             p {
                 color: var(--text-color);
                 margin: 0;
@@ -148,18 +149,23 @@ ul {
     z-index: 1;
     background-image: url(../images/Homepage_Screen_01.jpg);
 }
+
 .slide1 {
     background-image: url(../images/Homepage_Screen_01.jpg);
 }
+
 .slide2 {
     background-image: url(../images/Homepage_Screen_02.jpg);
 }
+
 .slide3 {
     background-image: url(../images/Homepage_Screen_03.jpg);
 }
+
 .slide4 {
     background-image: url(../images/Homepage_Screen_04.jpg);
 }
+
 .slide5 {
     background-image: url(../images/Homepage_Screen_05.jpg);
 }
@@ -181,6 +187,7 @@ ul {
             margin-left: 1em;
             align-items: center;
         }
+
         .artist-name {
             margin-top: 0;
         }
@@ -190,6 +197,7 @@ ul {
 
             .svg-container:hover {
                 cursor: pointer;
+
                 path {
                     fill: var(--primary-accent-color);
                 }

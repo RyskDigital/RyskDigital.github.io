@@ -1,139 +1,173 @@
 html {
     scroll-behavior: smooth;
 }
+
 .projectContainer {
     position: relative;
     left: 25rem;
     top: 4rem;
     width: calc(100% - 28rem);
     box-sizing: border-box;
+    display: grid;
+    row-gap: 2rem;
+    justify-items: center;
+}
+
+.project-image {
+    max-height: 95vh;
+    max-width: 95vh;
+    width: 100%;
+    border-radius: 1rem;
+    // box-shadow: 0 0.5rem 1.5rem 0 rgba($color: #000000, $alpha: 0.35);
+}
+
+.project-card {
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color-dark);
+    border-radius: 1rem;
+    color: var(--text-color);
+    // box-shadow: 0 0.5rem 1.5rem 0 rgba($color: #000000, $alpha: 0.35);
     display: flex;
     flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
 
-    img {
-        max-height: 95vh;
-        max-width: 100%;
-        border-radius: 2rem;
-        margin: 2rem 0;
-        box-shadow: 0 0.5rem 1.5rem 0 rgba($color: #000000, $alpha: 0.35);
-        flex-grow: 1;
+    h4 {
+        color: var(--primary-accent-color);
+        font-size: 1.5rem;
+        margin: 2rem
     }
-    h3 {
-        margin: 1rem 0;
-        font-size: 2rem;
+
+    ul {
+        align-self: flex-start;
+        margin: 0 2rem 2rem;
+    }
+
+    li {
+        margin: 0 0 0.5rem;
+        list-style: disc inside;
+    }
+
+    p {
+        margin: 0 2rem 2rem;
+        max-width: 60ch;
+    }
+}
+
+.title-container {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 100px auto;
+    width: 100%;
+    column-gap: 2rem;
+
+    .project-title {
+        margin: 0;
+        font-size: 3rem;
         font-weight: bold;
         letter-spacing: 0.15rem;
         text-align: center;
-        color: var(--text-color-dark);
-        background-color: var(--background-color-light);
-        padding: 1rem 3rem;
-        border-radius: 1rem 3rem;
-    }
-    p {
-        margin: 1.25rem 0;
-        font-size: 1.25rem;
-        line-height: 1.25;
-        font-weight: 300;
-        text-align: center;
         color: var(--text-color-light);
-        max-width: 60ch;
+        justify-self: start;
+        align-self: center;
     }
-    ul {
-        margin: 0;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        list-style-type: disc;
-    }
-    li {
-        margin: 0.25rem 1rem;
-        font-size: 1rem;
-        color: var(--text-color);
-    }
-    .columnContainer {
-        display: flex;
-        align-items: baseline;
-    }
-    .project-page-footer{
-        display: grid;
-        grid-auto-flow: column;
+}
 
-        .navigation-link {
-            font-weight: 300;
-            font-size: 1.4em;
-            text-decoration: none;
-            color: var(--text-color);
-            transition: 0.5s;
-            margin: 1rem;
-    
-            &:hover {
-                color: var(--primary-accent-color);
-            }
+.info-section {
+    max-width: 95vh;
+    width: 100%;
+    display: grid;
+    grid-template:
+        "desc software"
+        "desc aspects"
+    ;
+    gap: 2rem;
+
+    img {
+        display: none;
+    }
+
+    .description {
+        grid-area: desc;
+    }
+
+    .software-list {
+        grid-area: software;
+    }
+
+    .aspects-list {
+        grid-area: aspects;
+    }
+}
+
+.project-page-footer {
+    display: grid;
+    grid-auto-flow: column;
+
+    .navigation-link {
+        font-weight: 300;
+        font-size: 1.4em;
+        text-decoration: none;
+        color: var(--text-color);
+        transition: 0.5s;
+        margin: 1rem;
+
+        &:hover {
+            color: var(--primary-accent-color);
         }
     }
 }
-.screenImageOverlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    z-index: 2;
-    width: 100%;
-    height: 100%;
-    background-color: var(--navigation-bar-background-color);
 
-    img {
-        margin: 4em 8em 1em 4em;
-        max-height: calc(100% - 8em);
-        max-width: calc(100% - 16em);
-    }
-    .caption {
-        font-size: 1.5em;
-        color: var(--text-color-light);
-    }
-}
-.textureSwatch {
+.texture-swatch {
     display: grid;
     grid-template-columns: 1fr;
 
     img {
-        margin: 2rem 0 0 0;
+        margin: 0;
         grid-row: 1;
         grid-column: 1/2;
+        max-height: 95vh;
+        max-width: 100%;
+        border-radius: 1rem;
     }
 
-    .swatchImageAO {
+    .swatch-image-D {
+        box-shadow: 0 0.5rem 1.5rem 0 rgba($color: #000000, $alpha: 0.35);
+    }
+
+    .swatch-image-AO {
         opacity: 0;
         transition: 0.4s;
         clip-path: polygon(25% 0, 50% 0, 50% 0, 25% 0);
     }
-    .swatchImageN {
+
+    .swatch-image-N {
         opacity: 0;
         transition: 0.5s;
         clip-path: polygon(50% 0, 75% 0, 75% 0, 50% 0);
     }
-    .swatchImageR {
+
+    .swatch-image-R {
         opacity: 0;
         transition: 0.6s;
         clip-path: polygon(75% 0, 100% 0, 100% 0, 75% 0);
     }
 }
-.textureSwatch:hover {
+
+.texture-swatch:hover {
     img {
         opacity: 100;
     }
 
-    .swatchImageAO {
+    .swatch-image-AO {
         clip-path: polygon(25% 0, 50% 0, 50% 100%, 25% 100%);
     }
-    .swatchImageN {
+
+    .swatch-image-N {
         clip-path: polygon(50% 0, 75% 0, 75% 100%, 50% 100%);
     }
-    .swatchImageR {
+
+    .swatch-image-R {
         clip-path: polygon(75% 0, 100% 0, 100% 100%, 75% 100%);
     }
 }
@@ -141,13 +175,8 @@ html {
 @media screen and (max-width: 1180px) {
     .projectContainer {
         left: 2rem;
-        top: 7rem;
+        top: 8rem;
         width: calc(100% - 4rem);
-
-        img {
-            border-radius: 1rem;
-            margin: 1rem 0 0 0;
-        }
     }
 
     .navigation-bar {
@@ -162,6 +191,7 @@ html {
             margin-left: 1em;
             align-items: center;
         }
+
         .artist-name {
             margin-top: 0;
         }
@@ -197,4 +227,57 @@ html {
             display: none;
         }
     }
+}
+
+@media screen and (max-width: 650px) {
+    .info-section {
+        grid-template:
+            "desc"
+            "img1"
+            "software"
+            "img2"
+            "aspects"
+        ;
+
+        img {
+            display: block;
+        }
+    }
+
+    .info-img1 {
+        grid-area: img1;
+    }
+
+    .info-img2 {
+        grid-area: img2;
+    }
+
+    .hide-img {
+        display: none;
+    }
+
+    .software-list {
+        ul {
+            display: flex;
+            align-self: center;
+            flex-wrap: wrap;
+        }
+
+        li {
+            padding: 0 0.5rem;
+        }
+    }
+
+    .aspects-list {
+        ul {
+            display: flex;
+            align-self: center;
+            flex-wrap: wrap;
+        }
+
+        li {
+            padding: 0 0.5rem;
+        }
+    }
+
 }
