@@ -34,38 +34,22 @@ ul {
   left: 2em;
   z-index: 2;
   background-color: var(--navigation-bar-background-color);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   height: 100%;
   max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
-  -webkit-box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.35);
-          box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 1.5rem 0 rgba(0, 0, 0, 0.35);
 }
-
 .navigation-bar .logo-and-titles-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-direction: row;
   margin: 4em 1.5em 1.5em 1.5em;
 }
-
 .navigation-bar .nav-menu-links-container {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
 }
-
 .navigation-bar .nav-menu-links-container .close-navigation-button {
   display: none;
   position: fixed;
@@ -74,44 +58,29 @@ ul {
   font-weight: bold;
   font-size: 1.2em;
 }
-
 .navigation-bar .nav-menu-links-container .close-navigation-button p {
   color: var(--text-color);
   margin: 0;
   cursor: pointer;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
 .navigation-bar .nav-menu-links-container .close-navigation-button p:hover {
   color: var(--primary-accent-color);
 }
-
 .navigation-bar .mobile-menu-button {
   display: none;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  align-self: center;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-grow: 1;
   margin-right: 2em;
 }
-
 .navigation-bar .site-logo {
   width: 70px;
   height: 70px;
   border-radius: 35px;
   margin-right: 0.5em;
 }
-
 .navigation-bar .artist-name {
   font-style: italic;
   font-size: 1.25em;
@@ -120,7 +89,6 @@ ul {
   margin-top: 0.65em;
   color: var(--primary-accent-color);
 }
-
 .navigation-bar .artist-title {
   font-size: 1em;
   font-weight: 400;
@@ -128,33 +96,26 @@ ul {
   margin-left: 1.2em;
   color: var(--text-color-light);
 }
-
 .navigation-bar .navigation-link {
   font-weight: 300;
   font-size: 1.4em;
   text-decoration: none;
   color: var(--text-color);
-  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-
 .navigation-bar .navigation-link:hover {
   color: var(--primary-accent-color);
 }
-
 .navigation-bar .current-page {
   color: var(--primary-accent-color);
 }
-
 .navigation-bar li {
   margin: 1.2em;
   margin-left: 1.5em;
 }
-
 .navigation-bar .navigation-menu-footer {
   color: var(--text-color);
 }
-
 .navigation-bar .navigation-menu-footer p {
   font-style: italic;
   margin-left: 1.6em;
@@ -170,7 +131,6 @@ ul {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
-  -webkit-transition: background-image 1s;
   transition: background-image 1s;
   z-index: 1;
   background-image: url(../images/Homepage_Screen_01.jpg);
@@ -201,10 +161,7 @@ ul {
     background-position: 58% center;
   }
   .navigation-bar {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     height: 6em;
     left: 0;
     width: 100%;
@@ -213,16 +170,12 @@ ul {
   .navigation-bar .logo-and-titles-container {
     margin: 0;
     margin-left: 1em;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   .navigation-bar .artist-name {
     margin-top: 0;
   }
   .navigation-bar .mobile-menu-button {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .navigation-bar .mobile-menu-button .svg-container:hover {
@@ -253,5 +206,4 @@ ul {
   .navigation-bar .navigation-menu-footer {
     display: none;
   }
-}
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

@@ -51,3 +51,9 @@ function hideNavigationMenu() {
     let navigationMenu = document.getElementById("navigation-menu");
     navigationMenu.classList.remove("menu-open");
 }
+
+function contact(url) {
+    window.location.href = `mailto:${url}${String.fromCharCode(
+        64
+    )}${String.fromCharCode(103)}mail${String.fromCharCode(46)}com`;
+}

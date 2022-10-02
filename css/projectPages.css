@@ -7,9 +7,7 @@ html {
   left: 25rem;
   top: 4rem;
   width: calc(100% - 28rem);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -ms-grid;
+  box-sizing: border-box;
   display: grid;
   gap: 2rem;
   justify-items: center;
@@ -28,35 +26,23 @@ html {
   background-color: var(--background-color-dark);
   border-radius: 1rem;
   color: var(--text-color);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
-
 .project-card h4 {
   color: var(--primary-accent-color);
   font-size: 1.5rem;
   margin: 2rem;
 }
-
 .project-card ul {
-  -ms-flex-item-align: start;
-      align-self: flex-start;
+  align-self: flex-start;
   margin: 0 2rem 2rem;
 }
-
 .project-card li {
   margin: 0 0 0.5rem;
   list-style: disc inside;
 }
-
 .project-card p {
   margin: 0 2rem 2rem;
   max-width: 60ch;
@@ -64,117 +50,88 @@ html {
 }
 
 .title-container {
-  display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
-  -ms-grid-columns: 100px auto;
-      grid-template-columns: 100px auto;
+  grid-template-columns: 100px auto;
   max-width: 95vh;
   width: 100%;
   gap: 2rem;
 }
-
 .title-container .project-title {
   margin: 0;
   font-size: 3rem;
   font-weight: bold;
   letter-spacing: 0.15rem;
   color: var(--text-color-light);
-  -ms-grid-column-align: start;
-      justify-self: start;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  justify-self: start;
+  align-self: center;
 }
 
 .info-section {
   max-width: 95vh;
   width: 100%;
-  display: -ms-grid;
   display: grid;
-  grid-template: "desc software" "desc aspects";
+  grid-template: "desc software" "desc aspects";
   gap: 2rem;
 }
-
 .info-section img {
   display: none;
 }
-
 .info-section .description {
   grid-area: desc;
 }
-
 .info-section .software-list {
   grid-area: software;
 }
-
 .info-section .aspects-list {
   grid-area: aspects;
 }
 
 .project-page-footer {
-  display: -ms-grid;
   display: grid;
   grid-auto-flow: column;
 }
-
 .project-page-footer .navigation-link {
   font-weight: 300;
   font-size: 1.4em;
   text-decoration: none;
   color: var(--text-color);
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   margin: 1rem;
 }
-
 .project-page-footer .navigation-link:hover {
   color: var(--primary-accent-color);
 }
 
 .texture-swatch {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
 }
-
 .texture-swatch img {
   margin: 0;
-  -ms-grid-row: 1;
   grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
   grid-column: 1/2;
   max-height: 95vh;
   max-width: 100%;
   border-radius: 1rem;
 }
-
 .texture-swatch .swatch-image-D {
-  -webkit-box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.35);
-          box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.35);
 }
-
 .texture-swatch .swatch-image-AO {
   opacity: 0;
-  -webkit-transition: 0.4s;
   transition: 0.4s;
   -webkit-clip-path: polygon(25% 0, 50% 0, 50% 0, 25% 0);
           clip-path: polygon(25% 0, 50% 0, 50% 0, 25% 0);
 }
-
 .texture-swatch .swatch-image-N {
   opacity: 0;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
   -webkit-clip-path: polygon(50% 0, 75% 0, 75% 0, 50% 0);
           clip-path: polygon(50% 0, 75% 0, 75% 0, 50% 0);
 }
-
 .texture-swatch .swatch-image-R {
   opacity: 0;
-  -webkit-transition: 0.6s;
   transition: 0.6s;
   -webkit-clip-path: polygon(75% 0, 100% 0, 100% 0, 75% 0);
           clip-path: polygon(75% 0, 100% 0, 100% 0, 75% 0);
@@ -183,17 +140,14 @@ html {
 .texture-swatch:hover img {
   opacity: 100;
 }
-
 .texture-swatch:hover .swatch-image-AO {
   -webkit-clip-path: polygon(25% 0, 50% 0, 50% 100%, 25% 100%);
           clip-path: polygon(25% 0, 50% 0, 50% 100%, 25% 100%);
 }
-
 .texture-swatch:hover .swatch-image-N {
   -webkit-clip-path: polygon(50% 0, 75% 0, 75% 100%, 50% 100%);
           clip-path: polygon(50% 0, 75% 0, 75% 100%, 50% 100%);
 }
-
 .texture-swatch:hover .swatch-image-R {
   -webkit-clip-path: polygon(75% 0, 100% 0, 100% 100%, 75% 100%);
           clip-path: polygon(75% 0, 100% 0, 100% 100%, 75% 100%);
@@ -206,10 +160,7 @@ html {
     width: calc(100% - 4rem);
   }
   .navigation-bar {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     height: 6em;
     left: 0;
     width: 100%;
@@ -218,16 +169,12 @@ html {
   .navigation-bar .logo-and-titles-container {
     margin: 0;
     margin-left: 1em;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   .navigation-bar .artist-name {
     margin-top: 0;
   }
   .navigation-bar .mobile-menu-button {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .navigation-bar .nav-menu-links-container {
@@ -253,7 +200,6 @@ html {
     display: none;
   }
 }
-
 @media screen and (max-width: 650px) {
   .project-container {
     gap: 1rem;
@@ -269,7 +215,7 @@ html {
   }
   .info-section {
     gap: 1rem;
-    grid-template: "desc" "img1" "software" "img2" "aspects";
+    grid-template: "desc" "img1" "software" "img2" "aspects";
   }
   .info-section img {
     display: block;
@@ -284,28 +230,19 @@ html {
     display: none;
   }
   .software-list ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-item-align: center;
-        align-self: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    align-self: center;
+    flex-wrap: wrap;
   }
   .software-list li {
     padding: 0 0.5rem;
   }
   .aspects-list ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-item-align: center;
-        align-self: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    align-self: center;
+    flex-wrap: wrap;
   }
   .aspects-list li {
     padding: 0 0.5rem;
   }
-}
-/*# sourceMappingURL=projectPages.css.map */
+}/*# sourceMappingURL=projectPages.css.map */
