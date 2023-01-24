@@ -166,6 +166,68 @@
   font-size: 1.25rem;
   letter-spacing: 0.05rem;
   line-height: 1.4;
+  margin: 3rem 0 0;
+}
+
+.exp-card-container {
+  display: grid;
+  row-gap: 3rem;
+  margin: 3rem 0;
+}
+
+.exp-card {
+  background-color: var(--background-color-dark);
+  border-radius: 1rem;
+  display: grid;
+  grid-template-rows: auto;
+  padding: 3rem;
+  row-gap: 3rem;
+}
+.exp-card p {
+  max-width: 70ch;
+  color: var(--text-color);
+  font-size: 1.25rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.4;
+  margin: 0;
+}
+.exp-card .job-info {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+.exp-card .job-info h5 {
+  color: var(--primary-accent-color);
+  font-size: 1.9rem;
+  letter-spacing: 0.05rem;
+  font-weight: 500;
+  margin: 0;
+}
+.exp-card .job-info h6 {
+  color: var(--text-color-light);
+  font-size: 1.6rem;
+  letter-spacing: 0.05rem;
+  font-weight: 500;
+  margin: 0.5rem 0 1rem;
+}
+.exp-card .job-info p {
+  text-align: right;
+}
+.exp-card .highlight-text {
+  color: var(--exp-highlight);
+  font-size: 1.4rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.4;
+  margin: 0 0 0.75rem;
+}
+.exp-card ul {
+  list-style: disc inside;
+}
+.exp-card li {
+  max-width: 70ch;
+  color: var(--text-color);
+  font-size: 1.25rem;
+  letter-spacing: 0.05rem;
+  line-height: 1.4;
 }
 
 @media screen and (max-width: 1300px) {
