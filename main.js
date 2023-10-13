@@ -6,23 +6,23 @@ function changeBackgroundImage() {
     let currentBackgroundImage =
         computedStyle.getPropertyValue("background-image");
     switch (true) {
-        case currentBackgroundImage.includes("images/Homepage_Screen_01.jpg"):
+        case currentBackgroundImage.includes("portfolio-images/homepage.jpg"):
             slideElement.classList.remove("slide1");
             slideElement.classList.add("slide2");
             break;
-        case currentBackgroundImage.includes("images/Homepage_Screen_02.jpg"):
+        case currentBackgroundImage.includes("portfolio-images/homepage-2.jpg"):
             slideElement.classList.remove("slide2");
             slideElement.classList.add("slide3");
             break;
-        case currentBackgroundImage.includes("images/Homepage_Screen_03.jpg"):
+        case currentBackgroundImage.includes("portfolio-images/homepage-3.jpg"):
             slideElement.classList.remove("slide3");
             slideElement.classList.add("slide4");
             break;
-        case currentBackgroundImage.includes("images/Homepage_Screen_04.jpg"):
+        case currentBackgroundImage.includes("portfolio-images/homepage-4.jpg"):
             slideElement.classList.remove("slide4");
             slideElement.classList.add("slide5");
             break;
-        case currentBackgroundImage.includes("images/Homepage_Screen_05.jpg"):
+        case currentBackgroundImage.includes("portfolio-images/homepage-5.jpg"):
             slideElement.classList.remove("slide5");
             slideElement.classList.add("slide1");
             break;
