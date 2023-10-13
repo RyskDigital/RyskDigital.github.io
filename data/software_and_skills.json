@@ -1,0 +1,31 @@
+{
+    "software": [
+        "Houdini",
+        "Python",
+        "Blender",
+        "3ds Max",
+        "Helix-Core (Perforce)",
+        "Substance 3D Suite",
+        "Photoshop",
+        "Maya",
+        "Unreal Engine",
+        "V-Ray",
+        "ZBrush",
+        "Unity",
+        "Marmoset Toolbag",
+        "Figma",
+        "JavaScript"
+    ],
+    "skills": [
+        "3D Modeling",
+        "Procedural Modeling",
+        "PBR Texturing",
+        "Procedural Texturing",
+        "Scripting",
+        "Tool Creation",
+        "PyQt (PySide)",
+        "Workflow Automation",
+        "Pipeline Automation",
+        "Web Design"
+    ]
+}
