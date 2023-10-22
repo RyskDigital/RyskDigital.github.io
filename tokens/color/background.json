@@ -5,6 +5,11 @@
                 "base": {
                     "value": "#262626"
                 }
+            },
+            "navigation": {
+                "transparent": {
+                    "value": "rgba(10, 10, 10, 0.8)"
+                }
             }
         }
     }
