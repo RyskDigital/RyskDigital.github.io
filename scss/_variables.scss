@@ -1,25 +1,40 @@
 /**
  * Do not edit directly
- * Generated on Mon, 23 Oct 2023 01:23:16 GMT
+ * Generated on Mon, 23 Oct 2023 04:23:29 GMT
  */
 
 :root {
+  --color-background-light: #999999;
   --color-background-base: #262626;
-  --color-background-light: #d9d9d9;
-  --color-background-dark: #0a0a0a;
-  --color-background-navigation-transparent: rgba(10, 10, 10, 0.8);
-  --color-background-navigation-solid: #333333;
-  --color-base-gray-100: #0a0a0a;
-  --color-base-gray-400: #262626;
-  --color-base-gray-500: #333333;
-  --color-base-gray-700: #999999;
-  --color-base-gray-900: #d9d9d9;
-  --color-base-orange-400: #ff851a;
-  --color-base-orange-700: #ffad66;
-  --color-brand-primary: #ff861b;
-  --color-brand-secondary: #1b94ff;
+  --color-background-dark: #1a1a1a;
+  --color-background-overlay-dark: rgba(10, 10, 10, 0.8);
+  --color-base-gray-100: #e6e6e6;
+  --color-base-gray-200: #cccccc;
+  --color-base-gray-300: #b3b3b3;
+  --color-base-gray-400: #999999;
+  --color-base-gray-500: #808080;
+  --color-base-gray-600: #666666;
+  --color-base-gray-700: #4d4d4d;
+  --color-base-gray-800: #333333;
+  --color-base-gray-850: #262626;
+  --color-base-gray-900: #1a1a1a;
+  --color-base-orange-100: #ffe4cc;
+  --color-base-orange-200: #ffc999;
+  --color-base-orange-300: #ffad66;
+  --color-base-orange-400: #ff9233;
+  --color-base-orange-450: #ff851a;
+  --color-base-orange-500: #ff7700;
+  --color-base-orange-600: #cc5f00;
+  --color-base-orange-700: #994700;
+  --color-base-orange-800: #663000;
+  --color-base-orange-900: #331800;
+  --color-base-white: #ffffff;
+  --color-base-black: #000000;
+  --color-brand-light: #ffad66;
+  --color-brand-base: #ff851a;
+  --color-brand-dark: #cc5f00;
+  --color-font-light: #e6e6e6;
   --color-font-base: #999999;
-  --color-font-light: #d9d9d9;
-  --color-font-accent-400: #ff851a;
-  --color-font-accent-700: #ffad66;
+  --color-font-accent-light: #ffad66;
+  --color-font-accent-base: #ff851a;
 }

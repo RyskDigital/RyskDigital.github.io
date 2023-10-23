@@ -1,11 +1,14 @@
 {
     "color": {
         "brand": {
-            "primary": {
-                "value": "#ff861b"
+            "light": {
+                "value": "{color.base.orange.300.value}"
             },
-            "secondary": {
-                "value": "#1B94FF"
+            "base": {
+                "value": "{color.base.orange.450.value}"
+            },
+            "dark": {
+                "value": "{color.base.orange.600.value}"
             }
         }
     }

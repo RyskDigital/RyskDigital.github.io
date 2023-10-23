@@ -1,18 +1,18 @@
 {
     "color": {
         "font": {
-            "base": {
-                "value": "{color.base.gray.700.value}"
-            },
             "light": {
-                "value": "{color.base.gray.900.value}"
+                "value": "{color.base.gray.100.value}"
+            },
+            "base": {
+                "value": "{color.base.gray.400.value}"
             },
             "accent": {
-                "400": {
-                    "value": "{color.base.orange.400.value}"
+                "light": {
+                    "value": "{color.brand.light.value}"
                 },
-                "700": {
-                    "value": "{color.base.orange.700.value}"
+                "base": {
+                    "value": "{color.brand.base.value}"
                 }
             }
         }
