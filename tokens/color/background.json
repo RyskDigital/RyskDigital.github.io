@@ -1,14 +1,21 @@
 {
     "color": {
         "background": {
-            "page": {
-                "base": {
-                    "value": "#262626"
-                }
+            "base": {
+                "value": "{color.base.gray.400.value}"
+            },
+            "light": {
+                "value": "{color.base.gray.900.value}"
+            },
+            "dark": {
+                "value": "{color.base.gray.100.value}"
             },
             "navigation": {
                 "transparent": {
                     "value": "rgba(10, 10, 10, 0.8)"
+                },
+                "solid": {
+                    "value": "{color.base.gray.500.value}"
                 }
             }
         }

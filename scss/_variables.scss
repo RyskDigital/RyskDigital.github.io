@@ -1,11 +1,25 @@
 /**
  * Do not edit directly
- * Generated on Sun, 22 Oct 2023 08:49:12 GMT
+ * Generated on Mon, 23 Oct 2023 01:23:16 GMT
  */
 
 :root {
-  --color-background-page-base: #262626;
+  --color-background-base: #262626;
+  --color-background-light: #d9d9d9;
+  --color-background-dark: #0a0a0a;
   --color-background-navigation-transparent: rgba(10, 10, 10, 0.8);
+  --color-background-navigation-solid: #333333;
+  --color-base-gray-100: #0a0a0a;
+  --color-base-gray-400: #262626;
+  --color-base-gray-500: #333333;
+  --color-base-gray-700: #999999;
+  --color-base-gray-900: #d9d9d9;
+  --color-base-orange-400: #ff851a;
+  --color-base-orange-700: #ffad66;
   --color-brand-primary: #ff861b;
   --color-brand-secondary: #1b94ff;
+  --color-font-base: #999999;
+  --color-font-light: #d9d9d9;
+  --color-font-accent-400: #ff851a;
+  --color-font-accent-700: #ffad66;
 }
