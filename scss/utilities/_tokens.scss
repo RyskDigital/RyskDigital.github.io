@@ -1,17 +1,45 @@
 @import "../variables";
 
-.color-bg-nav-transparent {
-    background-color: var(--color-background-navigation-transparent);
+.clr-bg-light {
+    background-color: var(--color-background-light);
 }
 
-.color-bg-nav-solid {
-    background-color: var(--color-background-navigation-solid);
+.clr-bg-base {
+    background-color: var(--color-background-base);
 }
 
-.color-font-accent-400 {
-    color: var(--color-font-accent-400);
+.clr-bg-dark {
+    background-color: var(--color-background-dark);
 }
 
-.color-font-accent-700 {
-    color: var(--color-font-accent-700);
+.clr-bg-brand-light {
+    background-color: var(--color-background-brand-light);
+}
+
+.clr-bg-brand-base {
+    background-color: var(--color-background-brand-base);
+}
+
+.clr-bg-brand-dark {
+    background-color: var(--color-background-brand-dark);
+}
+
+.clr-bg-overlay-dark {
+    background-color: var(--color-background-overlay-dark);
+}
+
+.clr-font-light {
+    color: var(--color-font-light);
+}
+
+.clr-font-base {
+    color: var(--color-font-base);
+}
+
+.clr-font-accent-light {
+    color: var(--color-font-accent-light);
+}
+
+.clr-font-accent-base {
+    color: var(--color-font-accent-base);
 }

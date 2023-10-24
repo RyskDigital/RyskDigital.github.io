@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Mon, 23 Oct 2023 04:23:29 GMT
+ * Generated on Tue, 24 Oct 2023 05:03:40 GMT
  */
 
 :root {
@@ -8,6 +8,9 @@
   --color-background-base: #262626;
   --color-background-dark: #1a1a1a;
   --color-background-overlay-dark: rgba(10, 10, 10, 0.8);
+  --color-background-brand-light: #ffad66;
+  --color-background-brand-base: #ff851a;
+  --color-background-brand-dark: #cc5f00;
   --color-base-gray-100: #e6e6e6;
   --color-base-gray-200: #cccccc;
   --color-base-gray-300: #b3b3b3;
@@ -37,4 +40,29 @@
   --color-font-base: #999999;
   --color-font-accent-light: #ffad66;
   --color-font-accent-base: #ff851a;
+  --size-border-tiny: 0.5rem;
+  --size-border-small: 0.75rem;
+  --size-border-medium: 1rem;
+  --size-border-large: 1.5rem;
+  --size-border-xl: 2rem;
+  --size-border-xxl: 3rem;
+  --size-font-tiny: 0.75rem;
+  --size-font-small: 0.875rem;
+  --size-font-medium: 1rem;
+  --size-font-large: 1.25rem;
+  --size-font-xl: 1.5rem;
+  --size-font-xxl: 2rem;
+  --size-font-xxxl: 3rem;
+  --size-margin-tiny: 0.25rem;
+  --size-margin-small: 0.5rem;
+  --size-margin-medium: 1rem;
+  --size-margin-large: 1.5rem;
+  --size-margin-xl: 2rem;
+  --size-margin-xxl: 3rem;
+  --size-padding-tiny: 0.25rem;
+  --size-padding-small: 0.5rem;
+  --size-padding-medium: 1rem;
+  --size-padding-large: 1.5rem;
+  --size-padding-xl: 2rem;
+  --size-padding-xxl: 3rem;
 }
