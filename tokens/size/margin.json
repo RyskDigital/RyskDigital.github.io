@@ -1,7 +1,7 @@
 {
     "size": {
         "margin": {
-            "tiny": {
+            "xs": {
                 "value": "0.25"
             },
             "small": {
