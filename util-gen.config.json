@@ -5,10 +5,10 @@
     "platforms": {
         "scss": {
             "transformGroup": "scss",
-            "buildPath": "scss/",
+            "buildPath": "scss/utilities/",
             "files": [
                 {
-                    "destination": "_tokens.scss",
+                    "destination": "_sd-utils.scss",
                     "format": "utility-classes"
                 }
             ]

@@ -18,28 +18,60 @@ function chooseProperty(jsonObject) {
                 break;
         }
     }
+    // if (jsonObject.attributes.category == "size") {
+    //     switch (jsonObject.attributes.type) {
+    //         case "font":
+    //             property = "font-size";
+    //             break;
+    //         case "margin":
+    //             property = "margin";
+    //             break;
+    //         case "padding":
+    //             property = "padding";
+    //             break;
+    //         case "border-width":
+    //             property = "border-width";
+    //             break;
+    //         case "border-radius":
+    //             property = "border-radius";
+    //             break;
+
+    //         default:
+    //             break;
+    //     }
+    // }
+    if (jsonObject.attributes.type == "border") {
+        switch (jsonObject.attributes.item) {
+            case "width":
+                property = "border-width";
+                break;
+
+            default:
+                break;
+        }
+    }
     return property;
 }
 
 StyleDictionary.registerFormat({
     name: "utility-classes",
     formatter: function (dictionary) {
-        let output = "";
+        let output = '@import "../variables";\n\n';
         dictionary.allTokens.forEach((element) => {
-            // if (
-            //     element.attributes.category == "color" &&
-            //     element.attributes.type == "background"
-            // ) {
-            //     output += `.${element.name} {\n    background-color: ${element.value};\n}\n\n`;
-            // }
-            if (!(chooseProperty(element) === undefined)) {
-                output += `.${element.name} {\n    ${chooseProperty(
-                    element
-                )}: ${element.value};\n}\n\n`;
+            if (chooseProperty(element) == undefined) {
+                return;
             }
+            switch (element.attributes.category) {
+                case "color":
+                    element.name = element.name.replace("color", "clr");
+                    break;
 
-            // console.log(JSON.stringify(element));
-            // output += `.${element.name} {\n    color: ${element.value};\n}\n`;
+                default:
+                    break;
+            }
+            output += `.${element.name} {\n    ${chooseProperty(
+                element
+            )}: var(--${element.name});\n}\n\n`;
         });
         return output;
     },
