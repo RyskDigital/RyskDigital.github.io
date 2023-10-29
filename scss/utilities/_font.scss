@@ -1,15 +1,23 @@
-.fs-400 {
-    font-size: 1rem;
+.italic {
+    font-style: italic;
 }
 
-.fs-500 {
-    font-size: 1.25rem;
+.fw-bold {
+    font-weight: 700;
 }
 
-.fw-400 {
+.fw-light {
+    font-weight: 300;
+}
+
+.fw-normal {
     font-weight: 400;
 }
 
-.italic {
-    font-style: italic;
+.ff-primary {
+    font-family: var(--font-family-primary);
+}
+
+.ff-secondary {
+    font-family: var(--font-family-secondary);
 }
