@@ -75,7 +75,7 @@ function chooseProperty(jsonObject) {
 StyleDictionary.registerFormat({
     name: "utility-classes",
     formatter: function (dictionary) {
-        let output = '@import "../variables";\n\n';
+        let output = "";
         dictionary.allTokens.forEach((element) => {
             if (chooseProperty(element) == undefined) {
                 return;

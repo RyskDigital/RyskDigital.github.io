@@ -22,3 +22,11 @@
 .align-items-center {
     align-items: center;
 }
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.gap {
+    gap: var(--gap, 0);
+}

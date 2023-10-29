@@ -10,15 +10,15 @@
     </head>
     <body>
         <div class="background-container | homepage-1"></div>
-        <div class="navigation-bar">
-            <header>
+        <div class="navigation-bar | flex-column size-padding-l">
+            <header class="size-margin-bottom-xl">
                 <div class="flex">
                     <img
                         class="img-width-70"
                         src="/ryskdigital_logo.svg"
                         alt="Artist Logo" />
                     <div
-                        class="flex-column justify-content-center size-margin-left-m">
+                        class="flex-column justify-content-center size-margin-left-s">
                         <p class="size-font-l italic color-font-accent-base">
                             Ryszard Klimczewski
                         </p>
@@ -28,25 +28,38 @@
                     </div>
                 </div>
             </header>
-            <img
-                class="moblie-menu-icon | img-width-40 hidden"
+            <!-- <img
+                class="mobile-menu-button | img-width-40 hidden"
                 src="/menu_icon.svg"
-                alt="Mobline Menu Icon" />
-            <nav>
-                <ul role="list">
-                    <li class="size-margin-left-xl">
+                alt="Mobline Menu Icon" /> -->
+            <svg
+                class="mobile-menu-button | hidden"
+                xmlns="http://www.w3.org/2000/svg"
+                width="40"
+                height="24.286"
+                viewBox="0 0 40 24.286"
+                fill="">
+                <path
+                    id="menuIcon"
+                    d="M2.143,24.286a2.143,2.143,0,0,1,0-4.286H37.857a2.143,2.143,0,0,1,0,4.286Zm0-10a2.143,2.143,0,0,1,0-4.286H37.857a2.143,2.143,0,0,1,0,4.286Zm0-10A2.143,2.143,0,0,1,2.143,0H37.857a2.143,2.143,0,0,1,0,4.286Z" />
+            </svg>
+            <nav class="flex-grow size-font-xl" data-menu-state="closed">
+                <ul role="list" class="flex-column gap">
+                    <li>
                         <a data-current-page="true" href="#">Home</a>
                     </li>
-                    <li class="size-margin-left-xl">
+                    <li>
                         <a href="#">Portfolio</a>
                     </li>
-                    <li class="size-margin-left-xl">
+                    <li>
                         <a href="#">Experience</a>
                     </li>
                 </ul>
             </nav>
             <footer>
-                <p>&copy; Ryszard Klimczewski, 2023</p>
+                <p class="italic size-font-s">
+                    &copy; Ryszard Klimczewski, 2023
+                </p>
             </footer>
         </div>
         <!-- <nav class="navigation-bar">

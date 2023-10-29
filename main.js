@@ -1,5 +1,5 @@
 import "/scss/main.scss";
-import { homepageImageUrls } from "./constants";
+import { homepageImageUrls, toggleMenu } from "./constants";
 
 for (let index = 0; index < homepageImageUrls.length; index++) {
     const preload = document.createElement("link");
@@ -48,6 +48,9 @@ function swapHomepageImage(element) {
 setInterval(function () {
     swapHomepageImage(backgroundContainer);
 }, 5000);
+
+const nav = document.querySelector(".mobile-menu-button");
+nav.addEventListener("click", toggleMenu);
 // const nav = document.getElementById("nav-container");
 // function slideIn() {
 //     nav.animate(
