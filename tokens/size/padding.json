@@ -4,13 +4,13 @@
             "xs": {
                 "value": "0.25"
             },
-            "small": {
+            "s": {
                 "value": "0.5"
             },
-            "medium": {
+            "m": {
                 "value": "1"
             },
-            "large": {
+            "l": {
                 "value": "1.5"
             },
             "xl": {
@@ -18,6 +18,86 @@
             },
             "xxl": {
                 "value": "3"
+            },
+            "left": {
+                "xs": {
+                    "value": "{size.padding.xs.value}"
+                },
+                "s": {
+                    "value": "{size.padding.s.value}"
+                },
+                "m": {
+                    "value": "{size.padding.m.value}"
+                },
+                "l": {
+                    "value": "{size.padding.l.value}"
+                },
+                "xl": {
+                    "value": "{size.padding.xl.value}"
+                },
+                "xxl": {
+                    "value": "{size.padding.xxl.value}"
+                }
+            },
+            "top": {
+                "xs": {
+                    "value": "{size.padding.xs.value}"
+                },
+                "s": {
+                    "value": "{size.padding.s.value}"
+                },
+                "m": {
+                    "value": "{size.padding.m.value}"
+                },
+                "l": {
+                    "value": "{size.padding.l.value}"
+                },
+                "xl": {
+                    "value": "{size.padding.xl.value}"
+                },
+                "xxl": {
+                    "value": "{size.padding.xxl.value}"
+                }
+            },
+            "right": {
+                "xs": {
+                    "value": "{size.padding.xs.value}"
+                },
+                "s": {
+                    "value": "{size.padding.s.value}"
+                },
+                "m": {
+                    "value": "{size.padding.m.value}"
+                },
+                "l": {
+                    "value": "{size.padding.l.value}"
+                },
+                "xl": {
+                    "value": "{size.padding.xl.value}"
+                },
+                "xxl": {
+                    "value": "{size.padding.xxl.value}"
+                }
+            },
+            "bottom": {
+                "xs": {
+                    "value": "{size.padding.xs.value}"
+                },
+                "s": {
+                    "value": "{size.padding.s.value}"
+                },
+                "m": {
+                    "value": "{size.padding.m.value}"
+                },
+                "l": {
+                    "value": "{size.padding.l.value}"
+                },
+                "xl": {
+                    "value": "{size.padding.xl.value}"
+                },
+                "xxl": {
+                    "value": "{size.padding.xxl.value}"
+                }
             }
         }
     }

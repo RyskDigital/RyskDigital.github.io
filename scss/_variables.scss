@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Tue, 24 Oct 2023 05:03:40 GMT
+ * Generated on Sun, 29 Oct 2023 02:02:50 GMT
  */
 
 :root {
@@ -40,29 +40,82 @@
   --color-font-base: #999999;
   --color-font-accent-light: #ffad66;
   --color-font-accent-base: #ff851a;
-  --size-border-tiny: 0.5rem;
-  --size-border-small: 0.75rem;
-  --size-border-medium: 1rem;
-  --size-border-large: 1.5rem;
-  --size-border-xl: 2rem;
-  --size-border-xxl: 3rem;
-  --size-font-tiny: 0.75rem;
-  --size-font-small: 0.875rem;
-  --size-font-medium: 1rem;
-  --size-font-large: 1.25rem;
+  --font-family-primary: "Rubik", sans-serif;
+  --font-family-secondary: "Nunito Sans", sans-serif;
+  --size-border-width-s: 0.125rem;
+  --size-border-width-m: 0.25rem;
+  --size-border-width-l: 0.5rem;
+  --size-border-radius-xs: 0.5rem;
+  --size-border-radius-s: 0.75rem;
+  --size-border-radius-m: 1rem;
+  --size-border-radius-l: 1.5rem;
+  --size-border-radius-xl: 2rem;
+  --size-border-radius-xxl: 3rem;
+  --size-font-xs: 0.75rem;
+  --size-font-s: 0.875rem;
+  --size-font-m: 1rem;
+  --size-font-l: 1.25rem;
   --size-font-xl: 1.5rem;
   --size-font-xxl: 2rem;
   --size-font-xxxl: 3rem;
-  --size-margin-tiny: 0.25rem;
-  --size-margin-small: 0.5rem;
-  --size-margin-medium: 1rem;
-  --size-margin-large: 1.5rem;
+  --size-margin-xs: 0.25rem;
+  --size-margin-s: 0.5rem;
+  --size-margin-m: 1rem;
+  --size-margin-l: 1.5rem;
   --size-margin-xl: 2rem;
   --size-margin-xxl: 3rem;
-  --size-padding-tiny: 0.25rem;
-  --size-padding-small: 0.5rem;
-  --size-padding-medium: 1rem;
-  --size-padding-large: 1.5rem;
+  --size-margin-left-xs: 0.25rem;
+  --size-margin-left-s: 0.5rem;
+  --size-margin-left-m: 1rem;
+  --size-margin-left-l: 1.5rem;
+  --size-margin-left-xl: 2rem;
+  --size-margin-left-xxl: 3rem;
+  --size-margin-top-xs: 0.25rem;
+  --size-margin-top-s: 0.5rem;
+  --size-margin-top-m: 1rem;
+  --size-margin-top-l: 1.5rem;
+  --size-margin-top-xl: 2rem;
+  --size-margin-top-xxl: 3rem;
+  --size-margin-right-xs: 0.25rem;
+  --size-margin-right-s: 0.5rem;
+  --size-margin-right-m: 1rem;
+  --size-margin-right-l: 1.5rem;
+  --size-margin-right-xl: 2rem;
+  --size-margin-right-xxl: 3rem;
+  --size-margin-bottom-xs: 0.25rem;
+  --size-margin-bottom-s: 0.5rem;
+  --size-margin-bottom-m: 1rem;
+  --size-margin-bottom-l: 1.5rem;
+  --size-margin-bottom-xl: 2rem;
+  --size-margin-bottom-xxl: 3rem;
+  --size-padding-xs: 0.25rem;
+  --size-padding-s: 0.5rem;
+  --size-padding-m: 1rem;
+  --size-padding-l: 1.5rem;
   --size-padding-xl: 2rem;
   --size-padding-xxl: 3rem;
+  --size-padding-left-xs: 0.25rem;
+  --size-padding-left-s: 0.5rem;
+  --size-padding-left-m: 1rem;
+  --size-padding-left-l: 1.5rem;
+  --size-padding-left-xl: 2rem;
+  --size-padding-left-xxl: 3rem;
+  --size-padding-top-xs: 0.25rem;
+  --size-padding-top-s: 0.5rem;
+  --size-padding-top-m: 1rem;
+  --size-padding-top-l: 1.5rem;
+  --size-padding-top-xl: 2rem;
+  --size-padding-top-xxl: 3rem;
+  --size-padding-right-xs: 0.25rem;
+  --size-padding-right-s: 0.5rem;
+  --size-padding-right-m: 1rem;
+  --size-padding-right-l: 1.5rem;
+  --size-padding-right-xl: 2rem;
+  --size-padding-right-xxl: 3rem;
+  --size-padding-bottom-xs: 0.25rem;
+  --size-padding-bottom-s: 0.5rem;
+  --size-padding-bottom-m: 1rem;
+  --size-padding-bottom-l: 1.5rem;
+  --size-padding-bottom-xl: 2rem;
+  --size-padding-bottom-xxl: 3rem;
 }

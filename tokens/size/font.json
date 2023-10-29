@@ -4,13 +4,13 @@
             "xs": {
                 "value": "0.75"
             },
-            "small": {
+            "s": {
                 "value": "0.875"
             },
-            "medium": {
+            "m": {
                 "value": "1"
             },
-            "large": {
+            "l": {
                 "value": "1.25"
             },
             "xl": {

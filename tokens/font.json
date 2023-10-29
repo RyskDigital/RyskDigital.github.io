@@ -1,0 +1,12 @@
+{
+    "font": {
+        "family": {
+            "primary": {
+                "value": "\"Rubik\", sans-serif"
+            },
+            "secondary": {
+                "value": "\"Nunito Sans\", sans-serif"
+            }
+        }
+    }
+}

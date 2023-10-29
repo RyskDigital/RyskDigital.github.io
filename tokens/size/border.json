@@ -2,13 +2,13 @@
     "size": {
         "border": {
             "width": {
-                "small": {
+                "s": {
                     "value": "0.125"
                 },
-                "medium": {
+                "m": {
                     "value": "0.25"
                 },
-                "large": {
+                "l": {
                     "value": "0.5"
                 }
             },
@@ -16,13 +16,13 @@
                 "xs": {
                     "value": "0.5"
                 },
-                "small": {
+                "s": {
                     "value": "0.75"
                 },
-                "medium": {
+                "m": {
                     "value": "1"
                 },
-                "large": {
+                "l": {
                     "value": "1.5"
                 },
                 "xl": {
