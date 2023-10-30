@@ -1,16 +1,24 @@
 import "/scss/main.scss";
-import { homepageImageUrls, toggleMenu } from "./constants";
+import { Cloudinary } from "@cloudinary/url-gen";
 
-for (let index = 0; index < homepageImageUrls.length; index++) {
-    const preload = document.createElement("link");
-    preload.rel = "preload";
-    preload.href = homepageImageUrls[index];
-    preload.as = "image";
-    preload.type = "image/jpeg";
-    document.head.appendChild(preload);
+const cloud = new Cloudinary({ cloud: { cloudName: "ryskdigital" } });
+
+const homepageImageUrls = [
+    cloud.image("portfolio-images/homepage.jpg").toURL(),
+    cloud.image("portfolio-images/homepage-2.jpg").toURL(),
+    cloud.image("portfolio-images/homepage-3.jpg").toURL(),
+    cloud.image("portfolio-images/homepage-4.jpg").toURL(),
+    cloud.image("portfolio-images/homepage-5.jpg").toURL(),
+];
+
+function toggleMenu() {
+    const nav = document.querySelector("nav");
+    if (nav.dataset.menuState == "opened") {
+        nav.dataset.menuState = "closed";
+    } else {
+        nav.dataset.menuState = "opened";
+    }
 }
-const backgroundContainer = document.querySelector(".background-container");
-backgroundContainer.style.backgroundImage = `url(${homepageImageUrls[0]})`;
 
 function swapHomepageImage(element) {
     if (element.classList.contains("homepage-1")) {
@@ -45,22 +53,29 @@ function swapHomepageImage(element) {
     }
 }
 
-setInterval(function () {
-    swapHomepageImage(backgroundContainer);
-}, 5000);
+function animateMenuIcon() {
+    const svg = document.querySelector(".mobile-menu-button");
+    if (svg.dataset.menuState == "opened") {
+        svg.dataset.menuState = "closed";
+    } else {
+        svg.dataset.menuState = "opened";
+    }
+}
+
+for (let index = 0; index < homepageImageUrls.length; index++) {
+    const preload = document.createElement("link");
+    preload.rel = "preload";
+    preload.href = homepageImageUrls[index];
+    preload.as = "image";
+    preload.type = "image/jpeg";
+    document.head.appendChild(preload);
+}
+
+const backgroundContainer = document.querySelector(".background-container");
+backgroundContainer.style.backgroundImage = `url(${homepageImageUrls[0]})`;
+
+setInterval(swapHomepageImage, 5000, backgroundContainer);
 
 const nav = document.querySelector(".mobile-menu-button");
 nav.addEventListener("click", toggleMenu);
-// const nav = document.getElementById("nav-container");
-// function slideIn() {
-//     nav.animate(
-//         [{ transform: "translateY(-100%)" }, { transform: "translateY(0%)" }],
-//         {
-//             duration: 3000,
-//             iterations: 1,
-//         }
-//     );
-// }
-// nav.addEventListener("load", slideIn());
-
-// console.log(nav.getAnimations());
+nav.addEventListener("click", animateMenuIcon);

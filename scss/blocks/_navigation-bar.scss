@@ -32,21 +32,65 @@
             border-radius: 0 0 0 var(--size-border-radius-s);
             text-align: end;
             overflow: hidden;
-            transition: height 300ms, border-top 100ms;
+            border-top: 0 solid var(--color-font-base);
+            transition: height 500ms, border-top 50ms 350ms;
         }
 
         nav[data-menu-state="opened"] {
             height: calc(
                 (var(--gap) * 2) + (var(--size-font-xl) * 3 * 1.2) +
-                    (var(--size-padding-l) * 2) + var(--size-border-width-s)
+                    (var(--size-padding-l) * 2) +
+                    (var(--size-border-width-s) * 3)
             );
             border-top: var(--size-border-width-s) solid var(--color-font-base);
+            transition: height 500ms, border-top 0ms;
+        }
+
+        > svg[data-menu-state="opened"] {
+            path {
+                transition: translate 200ms ease-out, rotate 250ms 200ms,
+                    opacity 0ms 200ms;
+            }
+
+            .line-top {
+                translate: 0px 10px;
+            }
+
+            .line-bot {
+                translate: 0 -10px;
+            }
+
+            .hamburger {
+                opacity: 0;
+            }
+
+            .x {
+                opacity: 1;
+            }
+
+            .x-1 {
+                rotate: 45deg;
+            }
+            .x-2 {
+                rotate: -45deg;
+            }
         }
 
         > svg {
             display: block;
             margin-left: auto;
-            fill: var(--color-font-base);
+            stroke: var(--color-font-base);
+            overflow: visible;
+
+            path {
+                transition: rotate 250ms, translate 200ms 250ms ease-out,
+                    opacity 0ms 250ms;
+                transform-origin: center;
+            }
+
+            .x {
+                opacity: 0;
+            }
         }
 
         ul {
@@ -62,7 +106,7 @@
 @media (hover: hover) {
     .navigation-bar {
         > svg:hover {
-            fill: var(--color-font-accent-base);
+            stroke: var(--color-font-accent-base);
             cursor: pointer;
         }
     }
