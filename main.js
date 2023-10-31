@@ -1,7 +1,5 @@
 import "/scss/main.scss";
-import { Cloudinary } from "@cloudinary/url-gen";
-
-const cloud = new Cloudinary({ cloud: { cloudName: "ryskdigital" } });
+import { toggleMenu, animateMenuIcon, cloud } from "/utilities.js";
 
 const homepageImageUrls = [
     cloud.image("portfolio-images/homepage.jpg").toURL(),
@@ -10,15 +8,6 @@ const homepageImageUrls = [
     cloud.image("portfolio-images/homepage-4.jpg").toURL(),
     cloud.image("portfolio-images/homepage-5.jpg").toURL(),
 ];
-
-function toggleMenu() {
-    const nav = document.querySelector("nav");
-    if (nav.dataset.menuState == "opened") {
-        nav.dataset.menuState = "closed";
-    } else {
-        nav.dataset.menuState = "opened";
-    }
-}
 
 function swapHomepageImage(element) {
     if (element.classList.contains("homepage-1")) {
@@ -50,15 +39,6 @@ function swapHomepageImage(element) {
         element.classList.toggle("homepage-1");
         element.style.backgroundImage = `url(${homepageImageUrls[0]})`;
         return;
-    }
-}
-
-function animateMenuIcon() {
-    const svg = document.querySelector(".mobile-menu-button");
-    if (svg.dataset.menuState == "opened") {
-        svg.dataset.menuState = "closed";
-    } else {
-        svg.dataset.menuState = "opened";
     }
 }
 
