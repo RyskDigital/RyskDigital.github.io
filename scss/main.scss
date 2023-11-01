@@ -22,6 +22,7 @@ body {
 a {
     text-decoration: none;
     color: var(--color-font-base);
+    transition: color 500ms;
 }
 
 a:hover {
