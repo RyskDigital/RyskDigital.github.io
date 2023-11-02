@@ -35,3 +35,14 @@
 .gap {
     gap: var(--gap, 0);
 }
+
+.nav-gutter {
+    margin-left: calc(var(--navigation-width) + (var(--size-margin-xl) * 2));
+}
+
+@media (max-width: 1024px) {
+    .nav-gutter {
+        margin-left: var(--size-margin-xl);
+        margin-top: calc(var(--navigation-height) + var(--size-margin-xl));
+    }
+}

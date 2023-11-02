@@ -10,5 +10,5 @@ const warAxeThumb = document.querySelector(".war-axe-thumb");
 warAxeThumb.src = cloud
     .image("portfolio-images/skyrim_steel_war_axe.jpg")
     .namedTransformation(name("war-axe-thumb"))
-    .setSignature("GvJOB2PE")
+    .setSignature("UtG8ouDt")
     .toURL();
