@@ -80,6 +80,7 @@ StyleDictionary.registerFormat({
             if (chooseProperty(element) == undefined) {
                 return;
             }
+            let varName = element.name;
             switch (element.attributes.category) {
                 case "color":
                     element.name = element.name.replace("background", "bg");
@@ -89,7 +90,7 @@ StyleDictionary.registerFormat({
             }
             output += `.${element.name} {\n    ${chooseProperty(
                 element
-            )}: var(--${element.name});\n}\n\n`;
+            )}: var(--${varName});\n}\n\n`;
         });
         return output;
     },
