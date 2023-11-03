@@ -1,20 +1,3 @@
 .content-wrapper {
     --gap: 2rem;
-
-    img {
-        // width: 100%;
-        border-radius: var(--size-border-radius-m);
-    }
-
-    > div {
-        position: relative;
-    }
-
-    p {
-        position: absolute;
-        width: 100%;
-        text-align: center;
-        bottom: 0;
-        padding-bottom: 6rem;
-    }
 }

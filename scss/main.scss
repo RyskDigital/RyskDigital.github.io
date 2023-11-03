@@ -9,6 +9,7 @@
 @import "blocks/background-container";
 @import "blocks/navigation-bar";
 @import "blocks/content-wrapper";
+@import "blocks/project-card";
 @import "exceptions/current-page";
 
 :root {
@@ -28,7 +29,7 @@ body {
 a {
     text-decoration: none;
     color: var(--color-font-base);
-    transition: color 500ms;
+    transition: color 300ms;
 }
 
 a:hover {

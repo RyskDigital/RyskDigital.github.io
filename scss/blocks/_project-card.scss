@@ -1,0 +1,31 @@
+.project-card {
+    display: grid;
+    overflow: hidden;
+    grid-template-rows: repeat(3, 1fr);
+
+    a {
+        z-index: 9999;
+        grid-area: 1 / 1 / 4;
+    }
+
+    img {
+        grid-area: 1 / 1 / 4;
+    }
+
+    > div {
+        grid-area: 3 / 1 / 4;
+        justify-content: center;
+        align-items: center;
+        scale: 1 0;
+        transition: scale 300ms ease-out;
+        transform-origin: bottom;
+        // this fixes slight overlay gap by ensuring a tiny bit of overflow
+        width: 100.5%;
+    }
+}
+
+.project-card:hover {
+    > div {
+        scale: 1 1;
+    }
+}
