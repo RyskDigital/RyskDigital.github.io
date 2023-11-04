@@ -10,6 +10,9 @@ function colorPropertyLogic(type) {
 }
 
 function sizePropertyLogic(type, item) {
+    if (type == "gap") {
+        return "gap";
+    }
     if (type == "font") {
         return "font-size";
     }
