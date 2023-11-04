@@ -21,6 +21,7 @@
         transform-origin: bottom;
         // this fixes slight overlay gap by ensuring a tiny bit of overflow
         width: 100.5%;
+        transform: translateY(1px);
     }
 }
 
