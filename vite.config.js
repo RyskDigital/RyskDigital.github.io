@@ -7,6 +7,10 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, "index.html"),
                 portfolio: resolve(__dirname, "portfolio/portfolio.html"),
+                skyrimSteelWarAxe: resolve(
+                    __dirname,
+                    "portfolio/skyrim-steel-war-axe/skyrim-steel-war-axe.html"
+                ),
             },
         },
     },

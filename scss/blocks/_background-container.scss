@@ -9,7 +9,7 @@
     transition: background-image 1s linear;
 }
 
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
     .background-container {
         background-position: 60% center;
     }

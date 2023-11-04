@@ -1,0 +1,14 @@
+.subpage-item {
+    display: flex;
+
+    svg {
+        stroke: var(--color-font-base);
+        transform: translateY(-0.5rem);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .subpage-item {
+        display: none;
+    }
+}
