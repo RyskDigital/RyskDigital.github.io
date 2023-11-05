@@ -9,7 +9,6 @@
 .grid-columns {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    justify-items: center;
 }
 
 @media screen and (max-width: 1024px) {
@@ -31,6 +30,10 @@
     justify-content: center;
 }
 
+.justify-items-center {
+    justify-items: center;
+}
+
 .align-items-center {
     align-items: center;
 }
@@ -48,4 +51,15 @@
         padding-left: var(--size-padding-xl);
         padding-top: calc(var(--navigation-height) + var(--size-padding-xl));
     }
+}
+
+.seperator {
+    height: 4px;
+    margin: 0;
+    border-radius: 2px;
+}
+
+.grid-columns-2x1 {
+    display: grid;
+    grid-template-columns: minmax(350, 2fr) 1fr;
 }

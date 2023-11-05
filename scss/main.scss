@@ -20,6 +20,7 @@
 body {
     font-family: var(--font-family-primary);
     font-weight: 400;
+    font-size: var(--size-font-m);
     line-height: 1.25;
     color: var(--color-font-base);
     background-color: var(--color-background-base);
@@ -43,6 +44,9 @@ ol {
 }
 
 h1,
-h2 {
+h2,
+h3,
+h4 {
     color: var(--color-font-light);
+    font-family: var(--font-family-secondary);
 }
