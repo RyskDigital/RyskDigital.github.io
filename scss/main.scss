@@ -6,10 +6,13 @@
 @import "utilities/font";
 @import "utilities/display";
 @import "utilities/img-width";
+@import "utilities/borders";
 @import "blocks/background-container";
 @import "blocks/navigation-bar";
 @import "blocks/project-card";
 @import "blocks/subpage-item";
+@import "blocks/project-wrapper";
+@import "blocks/project-description-card";
 @import "exceptions/current-page";
 
 :root {
