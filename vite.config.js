@@ -11,6 +11,10 @@ export default defineConfig({
                     __dirname,
                     "portfolio/skyrim-steel-war-axe/skyrim-steel-war-axe.html"
                 ),
+                amzUpholstery: resolve(
+                    __dirname,
+                    "portfolio/amz-upholstery/amz-upholstery.html"
+                ),
             },
         },
     },
