@@ -6,6 +6,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: resolve(__dirname, "index.html"),
+                experience: resolve(__dirname, "experience/experience.html"),
                 portfolio: resolve(__dirname, "portfolio/portfolio.html"),
                 skyrimSteelWarAxe: resolve(
                     __dirname,
@@ -18,6 +19,10 @@ export default defineConfig({
                 concreteTiles: resolve(
                     __dirname,
                     "portfolio/concrete-tiles/concrete-tiles.html"
+                ),
+                scifiPowerStation: resolve(
+                    __dirname,
+                    "portfolio/sci-fi-power-station/sci-fi-power-station.html"
                 ),
             },
         },
