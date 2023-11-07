@@ -15,6 +15,10 @@ export default defineConfig({
                     __dirname,
                     "portfolio/amz-upholstery/amz-upholstery.html"
                 ),
+                concreteTiles: resolve(
+                    __dirname,
+                    "portfolio/concrete-tiles/concrete-tiles.html"
+                ),
             },
         },
     },

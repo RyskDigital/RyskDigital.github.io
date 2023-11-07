@@ -15,9 +15,9 @@ window.addEventListener("resize", updateProjectGallerySpan);
 
 const imageList = document.querySelectorAll(".project-gallery > img");
 populateProjectGallery(
-    "amz_upholstery",
+    "concrete_tiles",
     imageList,
-    "Amazon Upholstery Gallery Image"
+    "Concrete Tiles Gallery Image"
 );
 
 const heroImages = document.querySelectorAll(".project-hero > img");
@@ -25,11 +25,11 @@ for (let index = 0; index < heroImages.length; index++) {
     const element = heroImages[index];
     switch (index) {
         case 0:
-            element.src = getCloudinaryImageUrl("amz_upholstery");
+            element.src = getCloudinaryImageUrl("concrete_tiles-8");
             element.alt = "Amazon Upholstery Hero Image One";
             break;
         case 1:
-            element.src = getCloudinaryImageUrl("amz_upholstery-5");
+            element.src = getCloudinaryImageUrl("concrete_tiles-6");
             element.alt = "Amazon Upholstery Hero Image Two";
             break;
         default:
