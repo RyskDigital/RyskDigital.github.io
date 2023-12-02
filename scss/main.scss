@@ -17,6 +17,7 @@
 @import "blocks/experience-header";
 @import "exceptions/current-page";
 @import "exceptions/project-gallery-span";
+@import "exceptions/button-link";
 
 :root {
     --navigation-width: 20rem;
@@ -36,11 +37,15 @@ body {
 a {
     text-decoration: none;
     color: var(--color-font-base);
-    transition: color 300ms;
+    transition: color 300ms, background-color 300ms, box-shadow 300ms;
 }
 
 a:hover {
     color: var(--color-font-accent-base);
+}
+
+svg {
+    transition: fill 300ms;
 }
 
 ul,

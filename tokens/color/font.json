@@ -7,6 +7,9 @@
             "base": {
                 "value": "{color.base.gray.400.value}"
             },
+            "dark": {
+                "value": "{color.base.gray.900.value}"
+            },
             "accent": {
                 "light": {
                     "value": "{color.brand.light.value}"
