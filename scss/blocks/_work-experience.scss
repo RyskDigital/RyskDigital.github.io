@@ -1,11 +1,11 @@
-.about-me {
-    p {
-        max-width: 60ch;
+.work-experience {
+    ul {
+        list-style: disc inside;
     }
 }
 
 @media screen and (max-width: 1024px) {
-    .about-me {
+    .work-experience {
         &.grid-columns {
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         }
