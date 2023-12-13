@@ -3,11 +3,3 @@
         list-style: disc inside;
     }
 }
-
-@media screen and (max-width: 1024px) {
-    .work-experience {
-        &.grid-columns {
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        }
-    }
-}
