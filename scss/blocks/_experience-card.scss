@@ -6,6 +6,10 @@
     p {
         max-width: 60ch;
     }
+
+    li {
+        max-width: 35ch;
+    }
 }
 
 @container (max-width: 500px) {
