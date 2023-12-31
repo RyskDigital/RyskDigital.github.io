@@ -42,8 +42,10 @@ a {
     transition: color 300ms, background-color 300ms, box-shadow 300ms;
 }
 
-a:hover {
-    color: var(--color-font-accent-base);
+@media (hover: hover) {
+    a:hover {
+        color: var(--color-font-accent-base);
+    }
 }
 
 svg {
