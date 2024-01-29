@@ -1,53 +1,61 @@
-function changeBackgroundImage() {
-    let slideElement = document.getElementsByClassName(
-        "home-page-slide-block"
-    )[0];
-    let computedStyle = getComputedStyle(slideElement);
-    let currentBackgroundImage =
-        computedStyle.getPropertyValue("background-image");
-    switch (true) {
-        case currentBackgroundImage.includes("portfolio-images/homepage.jpg"):
-            slideElement.classList.remove("slide1");
-            slideElement.classList.add("slide2");
-            break;
-        case currentBackgroundImage.includes("portfolio-images/homepage-2.jpg"):
-            slideElement.classList.remove("slide2");
-            slideElement.classList.add("slide3");
-            break;
-        case currentBackgroundImage.includes("portfolio-images/homepage-3.jpg"):
-            slideElement.classList.remove("slide3");
-            slideElement.classList.add("slide4");
-            break;
-        case currentBackgroundImage.includes("portfolio-images/homepage-4.jpg"):
-            slideElement.classList.remove("slide4");
-            slideElement.classList.add("slide5");
-            break;
-        case currentBackgroundImage.includes("portfolio-images/homepage-5.jpg"):
-            slideElement.classList.remove("slide5");
-            slideElement.classList.add("slide1");
-            break;
+import "/scss/main.scss";
+import { toggleMenu, animateMenuIcon, cloud } from "/utilities.js";
+
+const homepageImageUrls = [
+    cloud.image("portfolio-images/homepage.jpg").toURL(),
+    cloud.image("portfolio-images/homepage-2.jpg").toURL(),
+    cloud.image("portfolio-images/homepage-3.jpg").toURL(),
+    cloud.image("portfolio-images/homepage-4.jpg").toURL(),
+    cloud.image("portfolio-images/homepage-5.jpg").toURL(),
+];
+
+function swapHomepageImage(element) {
+    if (element.classList.contains("homepage-1")) {
+        element.classList.toggle("homepage-1");
+        element.classList.toggle("homepage-2");
+        element.style.backgroundImage = `url(${homepageImageUrls[1]})`;
+        return;
+    }
+    if (element.classList.contains("homepage-2")) {
+        element.classList.toggle("homepage-2");
+        element.classList.toggle("homepage-3");
+        element.style.backgroundImage = `url(${homepageImageUrls[2]})`;
+        return;
+    }
+    if (element.classList.contains("homepage-3")) {
+        element.classList.toggle("homepage-3");
+        element.classList.toggle("homepage-4");
+        element.style.backgroundImage = `url(${homepageImageUrls[3]})`;
+        return;
+    }
+    if (element.classList.contains("homepage-4")) {
+        element.classList.toggle("homepage-4");
+        element.classList.toggle("homepage-5");
+        element.style.backgroundImage = `url(${homepageImageUrls[4]})`;
+        return;
+    }
+    if (element.classList.contains("homepage-5")) {
+        element.classList.toggle("homepage-5");
+        element.classList.toggle("homepage-1");
+        element.style.backgroundImage = `url(${homepageImageUrls[0]})`;
+        return;
     }
 }
 
-function styleCurrentNavLink() {
-    if (location.pathname == "/") {
-        let homePageLink = document.getElementById("homeLink");
-        homePageLink.classList.add("current-page");
-    }
-    let navLinks = document.getElementsByClassName("navigation-link");
-    for (let item of navLinks) {
-        if (location.pathname.includes("/" + item.getAttribute("href"))) {
-            item.classList.add("current-page");
-        }
-    }
+for (let index = 0; index < homepageImageUrls.length; index++) {
+    const preload = document.createElement("link");
+    preload.rel = "preload";
+    preload.href = homepageImageUrls[index];
+    preload.as = "image";
+    preload.type = "image/jpeg";
+    document.head.appendChild(preload);
 }
 
-function displayNavigationMenu() {
-    let navigationMenu = document.getElementById("navigation-menu");
-    navigationMenu.classList.add("menu-open");
-}
+const backgroundContainer = document.querySelector(".background-container");
+backgroundContainer.style.backgroundImage = `url(${homepageImageUrls[0]})`;
 
-function hideNavigationMenu() {
-    let navigationMenu = document.getElementById("navigation-menu");
-    navigationMenu.classList.remove("menu-open");
-}
+setInterval(swapHomepageImage, 5000, backgroundContainer);
+
+const nav = document.querySelector(".mobile-menu-button");
+nav.addEventListener("click", toggleMenu);
+nav.addEventListener("click", animateMenuIcon);

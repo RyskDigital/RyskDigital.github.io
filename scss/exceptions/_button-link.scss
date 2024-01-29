@@ -1,0 +1,19 @@
+@media (hover: hover) {
+    a[data-button-link="true"]:hover {
+        background-color: var(--color-brand-base);
+        color: var(--color-font-dark);
+        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+        svg {
+            fill: var(--color-font-dark);
+        }
+    }
+}
+
+a[data-button-link="true"]:active {
+    background-color: var(--color-brand-base);
+    color: var(--color-font-dark);
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+    svg {
+        fill: var(--color-font-dark);
+    }
+}

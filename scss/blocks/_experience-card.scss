@@ -1,0 +1,21 @@
+.experience-card {
+    container-type: inline-size;
+    z-index: -1;
+    grid-template-rows: min-content auto auto;
+
+    p {
+        max-width: 60ch;
+    }
+
+    li {
+        max-width: 35ch;
+    }
+}
+
+@container (max-width: 500px) {
+    .experience-card {
+        header {
+            display: block;
+        }
+    }
+}

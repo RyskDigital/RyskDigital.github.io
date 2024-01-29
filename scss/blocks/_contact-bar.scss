@@ -1,0 +1,13 @@
+.contact-bar {
+    svg {
+        height: var(--size-font-l);
+        fill: var(--color-font-base);
+    }
+}
+
+@media screen and (max-width: 566px) {
+    .contact-bar {
+        flex-direction: column;
+        gap: var(--size-gap-s);
+    }
+}

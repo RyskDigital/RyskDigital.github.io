@@ -1,0 +1,27 @@
+.italic {
+    font-style: italic;
+}
+
+.text-nowrap {
+    white-space: nowrap;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+.fw-light {
+    font-weight: 300;
+}
+
+.fw-normal {
+    font-weight: 400;
+}
+
+.ff-primary {
+    font-family: var(--font-family-primary);
+}
+
+.ff-secondary {
+    font-family: var(--font-family-secondary);
+}

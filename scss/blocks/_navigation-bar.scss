@@ -1,0 +1,118 @@
+.navigation-bar {
+    z-index: 9999;
+    position: fixed;
+    left: 2rem;
+    top: 0;
+    background-color: var(--color-background-overlay-dark);
+    width: var(--navigation-width);
+    height: 100%;
+    padding-top: 3.5rem;
+    padding-bottom: 0.75rem;
+
+    p {
+        cursor: default;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .navigation-bar {
+        left: 0;
+        flex-direction: row;
+        width: 100%;
+        height: var(--navigation-height);
+        padding: var(--size-padding-m);
+        align-items: center;
+
+        header {
+            margin: 0;
+        }
+
+        nav {
+            position: absolute;
+            right: 0;
+            top: 100%;
+            height: 0;
+            width: max-content;
+            background-color: var(--color-background-overlay-dark);
+            border-radius: 0 0 0 var(--size-border-radius-s);
+            text-align: end;
+            overflow: hidden;
+            border-top: 0 solid var(--color-font-base);
+            transition: height 500ms, border-top 50ms 350ms;
+        }
+
+        nav[data-menu-state="opened"] {
+            height: calc(
+                (var(--size-gap-m) * 2) + (var(--size-font-xl) * 3 * 1.2) +
+                    (var(--size-padding-l) * 2) +
+                    (var(--size-border-width-s) * 3)
+            );
+            border-top: var(--size-border-width-s) solid var(--color-font-base);
+            transition: height 500ms, border-top 0ms;
+        }
+
+        > svg[data-menu-state="opened"] {
+            path {
+                transition: translate 200ms ease-out, rotate 250ms 200ms,
+                    opacity 0ms 200ms;
+            }
+
+            .line-top {
+                translate: 0px 10px;
+            }
+
+            .line-bot {
+                translate: 0 -10px;
+            }
+
+            .hamburger {
+                opacity: 0;
+            }
+
+            .x {
+                opacity: 1;
+            }
+
+            .x-1 {
+                rotate: 45deg;
+            }
+            .x-2 {
+                rotate: -45deg;
+            }
+        }
+
+        > svg {
+            display: block;
+            margin-left: auto;
+            stroke: var(--color-font-base);
+            overflow: visible;
+
+            path {
+                transition: rotate 250ms, translate 200ms 250ms ease-out,
+                    opacity 0ms 250ms;
+                transform-origin: center;
+            }
+
+            .x {
+                opacity: 0;
+            }
+        }
+
+        ul {
+            padding: var(--size-padding-l);
+        }
+
+        footer {
+            display: none;
+        }
+    }
+}
+
+@media (hover: hover) {
+    .navigation-bar {
+        > svg:hover {
+            stroke: var(--color-font-accent-base);
+            cursor: pointer;
+        }
+    }
+}

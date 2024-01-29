@@ -1,0 +1,104 @@
+{
+    "size": {
+        "margin": {
+            "xs": {
+                "value": "0.25"
+            },
+            "s": {
+                "value": "0.5"
+            },
+            "m": {
+                "value": "1"
+            },
+            "l": {
+                "value": "1.5"
+            },
+            "xl": {
+                "value": "2"
+            },
+            "xxl": {
+                "value": "3"
+            },
+            "left": {
+                "xs": {
+                    "value": "{size.margin.xs.value}"
+                },
+                "s": {
+                    "value": "{size.margin.s.value}"
+                },
+                "m": {
+                    "value": "{size.margin.m.value}"
+                },
+                "l": {
+                    "value": "{size.margin.l.value}"
+                },
+                "xl": {
+                    "value": "{size.margin.xl.value}"
+                },
+                "xxl": {
+                    "value": "{size.margin.xxl.value}"
+                }
+            },
+            "top": {
+                "xs": {
+                    "value": "{size.margin.xs.value}"
+                },
+                "s": {
+                    "value": "{size.margin.s.value}"
+                },
+                "m": {
+                    "value": "{size.margin.m.value}"
+                },
+                "l": {
+                    "value": "{size.margin.l.value}"
+                },
+                "xl": {
+                    "value": "{size.margin.xl.value}"
+                },
+                "xxl": {
+                    "value": "{size.margin.xxl.value}"
+                }
+            },
+            "right": {
+                "xs": {
+                    "value": "{size.margin.xs.value}"
+                },
+                "s": {
+                    "value": "{size.margin.s.value}"
+                },
+                "m": {
+                    "value": "{size.margin.m.value}"
+                },
+                "l": {
+                    "value": "{size.margin.l.value}"
+                },
+                "xl": {
+                    "value": "{size.margin.xl.value}"
+                },
+                "xxl": {
+                    "value": "{size.margin.xxl.value}"
+                }
+            },
+            "bottom": {
+                "xs": {
+                    "value": "{size.margin.xs.value}"
+                },
+                "s": {
+                    "value": "{size.margin.s.value}"
+                },
+                "m": {
+                    "value": "{size.margin.m.value}"
+                },
+                "l": {
+                    "value": "{size.margin.l.value}"
+                },
+                "xl": {
+                    "value": "{size.margin.xl.value}"
+                },
+                "xxl": {
+                    "value": "{size.margin.xxl.value}"
+                }
+            }
+        }
+    }
+}

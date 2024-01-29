@@ -1,0 +1,17 @@
+{
+    "source": [
+        "tokens/**/*.json"
+    ],
+    "platforms": {
+        "scss": {
+            "transformGroup": "scss",
+            "buildPath": "scss/utilities/",
+            "files": [
+                {
+                    "destination": "_sd-utils.scss",
+                    "format": "utility-classes"
+                }
+            ]
+        }
+    }
+}

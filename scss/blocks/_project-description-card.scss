@@ -1,0 +1,17 @@
+.project-description-card {
+    p {
+        max-width: 60ch;
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    .project-description-card {
+        flex-direction: row;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .project-description-card {
+        flex-direction: column;
+    }
+}

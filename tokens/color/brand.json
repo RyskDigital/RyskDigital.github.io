@@ -1,0 +1,15 @@
+{
+    "color": {
+        "brand": {
+            "light": {
+                "value": "{color.base.orange.300.value}"
+            },
+            "base": {
+                "value": "{color.base.orange.450.value}"
+            },
+            "dark": {
+                "value": "{color.base.orange.600.value}"
+            }
+        }
+    }
+}

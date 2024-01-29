@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200;0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;0,6..12,1000;1,6..12,200;1,6..12,300;1,6..12,400;1,6..12,500;1,6..12,600;1,6..12,700;1,6..12,800;1,6..12,900;1,6..12,1000&display=swap");
+@import "reset";
+@import "variables";
+@import "utilities/sd-utils";
+@import "utilities/font";
+@import "utilities/display";
+@import "utilities/img-width";
+@import "utilities/borders";
+@import "blocks/background-container";
+@import "blocks/navigation-bar";
+@import "blocks/project-card";
+@import "blocks/subpage-item";
+@import "blocks/project-description-card";
+@import "blocks/contact-bar";
+@import "blocks/about-me";
+@import "blocks/experience-header";
+@import "blocks/work-experience";
+@import "blocks/experience-card";
+@import "exceptions/current-page";
+@import "exceptions/project-gallery-span";
+@import "exceptions/button-link";
+
+:root {
+    --navigation-width: 20rem;
+    --navigation-height: 6.5rem;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    font-weight: 400;
+    font-size: var(--size-font-m);
+    line-height: 1.25;
+    color: var(--color-font-base);
+    background-color: var(--color-background-base);
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-font-base);
+    transition: color 300ms, background-color 300ms, box-shadow 300ms;
+}
+
+@media (hover: hover) {
+    a:hover {
+        color: var(--color-font-accent-base);
+    }
+}
+
+svg {
+    transition: fill 300ms;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--color-font-light);
+    font-family: var(--font-family-secondary);
+}

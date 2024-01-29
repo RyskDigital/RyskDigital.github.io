@@ -1,0 +1,66 @@
+.project-card {
+    display: grid;
+    overflow: hidden;
+    grid-template: repeat(2, 1fr) 33% / 100%;
+
+    a {
+        z-index: 9000;
+        grid-area: 1 / 1 / 4;
+    }
+
+    img {
+        grid-area: 1 / 1 / 4;
+    }
+
+    > div {
+        grid-area: 3 / 1 / 4;
+        justify-content: center;
+        align-items: center;
+        scale: 1 0;
+        transition: scale 300ms ease-out;
+        transform-origin: bottom;
+        // this fixes slight overlay gap by ensuring a tiny bit of overflow
+        width: 100.5%;
+        transform: translateY(1px);
+    }
+}
+
+@media (hover: hover) {
+    .project-card:hover {
+        > div {
+            scale: 1 1;
+        }
+    }
+}
+
+@media (hover: none) {
+    .project-card {
+        grid-template: 1fr 50px / 1fr;
+
+        img {
+            grid-area: 1 / 1 / 2 / 1;
+            z-index: 5000;
+            border-radius: var(--size-border-radius-m)
+                var(--size-border-radius-m) var(--size-border-radius-l)
+                var(--size-border-radius-l);
+            border: var(--size-padding-s) solid transparent;
+        }
+        > div {
+            grid-area: 1 / 1 / 3 / 3;
+            background-color: var(--color-background-brand-base);
+            scale: 1 1;
+            justify-content: center;
+            transform: translateY(-1px);
+            height: 100.5%;
+        }
+
+        p {
+            align-self: flex-end;
+            margin-bottom: calc(
+                25px - (var(--size-font-l) / 2) + (var(--size-padding-s) / 2)
+            );
+            color: var(--color-font-dark);
+            font-size: var(--size-font-l);
+        }
+    }
+}

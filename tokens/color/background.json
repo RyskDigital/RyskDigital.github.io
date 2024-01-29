@@ -1,0 +1,31 @@
+{
+    "color": {
+        "background": {
+            "light": {
+                "value": "{color.base.gray.400.value}"
+            },
+            "base": {
+                "value": "{color.base.gray.850.value}"
+            },
+            "dark": {
+                "value": "{color.base.gray.900.value}"
+            },
+            "overlay": {
+                "dark": {
+                    "value": "rgba(10 10 10 0.8)"
+                }
+            },
+            "brand": {
+                "light": {
+                    "value": "{color.brand.light.value}"
+                },
+                "base": {
+                    "value": "{color.brand.base.value}"
+                },
+                "dark": {
+                    "value": "{color.brand.dark.value}"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.about-me {
+    p {
+        max-width: 60ch;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .about-me {
+        &.grid-columns {
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        }
+    }
+}

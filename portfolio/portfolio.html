@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ryszard Klimczewski - Portfolio</title>
+        <link rel="icon" type="image/svg+xml" href="/ryskdigital_logo.svg" />
+        <script type="module" src="portfolio.js"></script>
+    </head>
+    <body>
+        <div class="navigation-bar | flex-column size-padding-l">
+            <header class="size-margin-bottom-xl">
+                <div class="flex">
+                    <img
+                        class="img-width-70"
+                        src="/ryskdigital_logo.svg"
+                        alt="Artist Logo" />
+                    <div
+                        class="flex-column justify-content-center size-margin-left-s">
+                        <p class="size-font-l italic color-font-accent-base">
+                            Ryszard Klimczewski
+                        </p>
+                        <p class="color-font-light size-margin-left-l">
+                            Technical Artist
+                        </p>
+                    </div>
+                </div>
+            </header>
+            <svg
+                class="mobile-menu-button | hidden"
+                data-menu-state="closed"
+                width="42"
+                height="24"
+                stroke=""
+                stroke-width="4"
+                stroke-linecap="round">
+                <path class="line-top hamburger" d="M2 2H40" />
+                <path class="line-mid hamburger" d="M2 12H40" />
+                <path class="x x-1" d="M2 12H40" />
+                <path class="x x-2" d="M2 12H40" />
+                <path class="line-bot hamburger" d="M2 22H40" />
+            </svg>
+            <nav class="flex-grow size-font-xl" data-menu-state="closed">
+                <ul role="list" class="flex-column size-gap-m">
+                    <li>
+                        <a href="/index.html">Home</a>
+                    </li>
+                    <li>
+                        <a data-current-page="true" href="#">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="/experience/experience.html">Experience</a>
+                    </li>
+                </ul>
+            </nav>
+            <footer>
+                <p class="italic size-font-s">
+                    &copy; Ryszard Klimczewski, 2023
+                </p>
+            </footer>
+        </div>
+        <div class="nav-gutter">
+            <div class="grid-columns size-gap-l size-padding-xl">
+                <div class="project-card | size-border-radius-m">
+                    <a
+                        href="/portfolio/skyrim-steel-war-axe/skyrim-steel-war-axe.html"></a>
+                    <img class="war-axe-thumb" src="" alt="" />
+                    <div class="flex color-bg-light">
+                        <p class="color-font-light size-font-xl ff-secondary">
+                            Skyrim Steel War Axe
+                        </p>
+                    </div>
+                </div>
+                <div class="project-card | size-border-radius-m">
+                    <a href="/portfolio/amz-upholstery/amz-upholstery.html"></a>
+                    <img class="amz-upholstery-thumb" src="" alt="" />
+                    <div class="flex color-bg-light">
+                        <p class="color-font-light size-font-xl ff-secondary">
+                            Amazon Upholstery
+                        </p>
+                    </div>
+                </div>
+                <div class="project-card | size-border-radius-m">
+                    <a href="/portfolio/concrete-tiles/concrete-tiles.html"></a>
+                    <img class="concrete-tiles-thumb" src="" alt="" />
+                    <div class="flex color-bg-light">
+                        <p class="color-font-light size-font-xl ff-secondary">
+                            Concrete Tiles
+                        </p>
+                    </div>
+                </div>
+                <div class="project-card | size-border-radius-m">
+                    <a
+                        href="/portfolio/sci-fi-power-station/sci-fi-power-station.html"></a>
+                    <img class="power-station-thumb" src="" alt="" />
+                    <div class="flex color-bg-light">
+                        <p class="color-font-light size-font-xl ff-secondary">
+                            Sci-Fi Power Station
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
