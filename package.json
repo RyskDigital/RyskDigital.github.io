@@ -1,7 +1,7 @@
 {
   "name": "ryskdigital.github.io",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "sd-build": "style-dictionary build --config ./sd.config.json",
