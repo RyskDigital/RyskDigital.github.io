@@ -27,16 +27,9 @@ concreteTilesThumb.src = cloud
     .setSignature("3fOyd2hx")
     .toURL();
 
-const concreteTilesThumb1 = document.querySelector(".concrete-tiles-thumb-1");
-concreteTilesThumb1.src = cloud
-    .image("portfolio-images/concrete_tiles-7.jpg")
-    .namedTransformation(name("square-thumb-1000"))
-    .setSignature("3fOyd2hx")
-    .toURL();
-
-const concreteTilesThumb2 = document.querySelector(".concrete-tiles-thumb-2");
-concreteTilesThumb2.src = cloud
-    .image("portfolio-images/concrete_tiles-6.jpg")
-    .namedTransformation(name("square-thumb-1000"))
-    .setSignature("3fOyd2hx")
+const powerStationThumb = document.querySelector(".power-station-thumb");
+powerStationThumb.src = cloud
+    .image("portfolio-images/power_station.jpg")
+    .namedTransformation(name("power-station-thumb-1000"))
+    .setSignature("v42l8viR")
     .toURL();
