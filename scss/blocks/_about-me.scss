@@ -11,3 +11,11 @@
         }
     }
 }
+
+@media screen and (max-width: 699px) {
+    .about-me {
+        &.grid-columns {
+            grid-template-columns: 1fr;
+        }
+    }
+}
